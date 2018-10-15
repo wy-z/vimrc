@@ -1,0 +1,4 @@
+
+" Go development plugin for Vim
+Plug 'fatih/vim-go'
+
