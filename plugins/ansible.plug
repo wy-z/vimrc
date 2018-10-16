@@ -1,0 +1,3 @@
+
+" Add additional support for Ansible in VIM
+Plug 'chase/vim-ansible-yaml'
