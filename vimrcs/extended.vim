@@ -15,9 +15,15 @@ imap fd <Esc>
 
 " fzf
 let g:fzf_buffers_jump = 1
-nmap <leader>jf :Files<cr>
-nmap <leader>jt :BTags<cr>
-nmap <leader>jl :BLines<cr>
+nmap <leader>p :Files<cr>
+nmap <leader>k :BTags<cr>
+nmap <leader>j :BLines<cr>
+
+" ctrlsf.vim
+nmap     <leader>ff <Plug>CtrlSFPrompt
+vmap     <leader>ff <Plug>CtrlSFVwordPath
+nnoremap <leader>fo :CtrlSFOpen<CR>
+nnoremap <leader>ft :CtrlSFToggle<CR>
 
 " ripgrep
 if executable("rg")
@@ -40,12 +46,6 @@ map F <Plug>Sneak_F
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 
-" ctrlsf.vim
-nmap     <leader>ff <Plug>CtrlSFPrompt
-vmap     <leader>ff <Plug>CtrlSFVwordPath
-nnoremap <leader>fo :CtrlSFOpen<CR>
-nnoremap <leader>ft :CtrlSFToggle<CR>
-
 " indentline
 let g:indentLine_enabled = 1
 let g:indentLine_setColors = 1
@@ -54,5 +54,11 @@ let g:indentLine_setColors = 1
 call neomake#configure#automake('w')
 let g:neomake_open_list = 1
 
+" neoformat
+augroup post_neoformat
+  autocmd!
+  au BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+augroup END
+
  " vim-gutentags
- let g:gutentags_cache_dir = '~/.cache/tags'
+ let g:gutentags_cache_dir = expand('~/.cache/tags')

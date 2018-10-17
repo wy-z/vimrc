@@ -17,6 +17,6 @@ call plug#end()
 "
 " Settings
 "
-for fpath in split(globpath(s:this_dir.'/settings', '*.vim'), '\n')
+for fpath in split(globpath(s:this_dir.'/vimrcs', '*.vim'), '\n')
   exe 'source' fpath
 endfor
