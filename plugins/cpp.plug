@@ -1,0 +1,3 @@
+
+" Additional Vim syntax highlighting for C++ (including C++11/14)
+Plug 'octol/vim-cpp-enhanced-highlight'

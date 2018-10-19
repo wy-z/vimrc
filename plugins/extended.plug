@@ -58,3 +58,6 @@ Plug 'markonm/traces.vim'
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 
+" Async Language Server Protocol plugin for vim8 and neovim
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
