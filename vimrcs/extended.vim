@@ -18,6 +18,8 @@ let g:fzf_buffers_jump = 1
 nmap <leader>p :Files<cr>
 nmap <leader>k :BTags<cr>
 nmap <leader>j :BLines<cr>
+nmap <leader><leader> :Commands<cr>
+nmap <leader>/ :Rg<cr>
 
 " ctrlsf.vim
 nmap     <leader>ff <Plug>CtrlSFPrompt
