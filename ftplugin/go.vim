@@ -1,5 +1,5 @@
 
-let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 0
 let g:go_auto_type_info = 0
 let g:go_def_mapping_enabled = 1
 let g:go_highlight_functions = 1
@@ -17,3 +17,6 @@ let g:neomake_go_golint_maker = {
             \ '%-G%.%#'
 	\ }
 let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
+
+let g:neoformat_enabled_go = ['gofmt']
+
