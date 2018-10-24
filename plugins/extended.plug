@@ -57,6 +57,3 @@ Plug 'zhimsel/vim-stay'
 " Range, pattern and substitute preview for Vim
 Plug 'markonm/traces.vim'
 
-" Async Language Server Protocol plugin for vim8 and neovim
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
