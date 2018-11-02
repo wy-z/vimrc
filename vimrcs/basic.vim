@@ -47,7 +47,6 @@ autocmd FileType proto setlocal ts=4 sts=4 sw=4 expandtab
 " Terminal
 if has('nvim')
     nmap <leader>` :terminal<cr>i
-    tnoremap <Esc> <C-\><C-n>
 else
     nmap <leader>` :terminal<cr>
 endif
