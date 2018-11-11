@@ -55,3 +55,5 @@ Plug 'zhimsel/vim-stay'
 " Range, pattern and substitute preview for Vim
 Plug 'markonm/traces.vim'
 
+" emmet for vim
+Plug 'mattn/emmet-vim'

@@ -68,3 +68,8 @@ augroup END
 
  " vim-gutentags
  let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+ " emmet
+ let g:user_emmet_install_global = 0
+ autocmd FileType html,css,vue EmmetInstall
+

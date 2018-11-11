@@ -1,0 +1,3 @@
+
+" Typescript syntax files for Vim
+Plug 'leafgarland/typescript-vim'

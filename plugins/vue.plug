@@ -1,0 +1,3 @@
+
+" Syntax Highlight for Vue.js components
+Plug 'posva/vim-vue'
