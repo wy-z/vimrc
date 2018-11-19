@@ -18,5 +18,5 @@ let g:neomake_go_golint_maker = {
 	\ }
 let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
 
-let g:neoformat_enabled_go = ['gofmt']
+let g:neoformat_enabled_go = ['goimports']
 
