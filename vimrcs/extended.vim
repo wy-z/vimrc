@@ -19,8 +19,8 @@ imap fd <Esc>
 " fzf
 let g:fzf_buffers_jump = 1
 nmap <leader>p :Files<cr>
-nmap <leader>k :BTags<cr>
-nmap <leader>j :BLines<cr>
+nmap <leader>j :BTags<cr>
+nmap <leader>s :BLines<cr>
 nmap <leader>b :Buffers<cr>
 nmap <leader><leader> :Commands<cr>
 nmap <leader>/ :Rg<cr>
@@ -45,8 +45,8 @@ vmap <C-v> <Plug>(expand_region_shrink)
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
 let g:sneak#s_next = 1
-nmap <leader>s <Plug>Sneak_s
-nmap <leader>S <Plug>Sneak_s
+nmap <leader>f <Plug>Sneak_s
+nmap <leader>F <Plug>Sneak_s
 map f <Plug>Sneak_f
 map F <Plug>Sneak_F
 map t <Plug>Sneak_t
