@@ -1,5 +1,6 @@
 
 set number
+set relativenumber
 set mouse=a
 set exrc
 set undodir=~/.cache/undo-dir
