@@ -37,10 +37,6 @@ if executable("rg")
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-" Vim expand region
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
-
 " Vim sneak
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
