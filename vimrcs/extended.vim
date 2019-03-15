@@ -14,7 +14,6 @@ let g:gitgutter_enabled = 1
 " incsearch.vim
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
-imap fd <Esc>
 
 " fzf
 let g:fzf_buffers_jump = 1
