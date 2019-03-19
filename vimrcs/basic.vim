@@ -36,12 +36,6 @@ nnoremap <C-l> <C-W>l
 set foldmethod=indent
 set foldopen=all
 
-" Disable Arrow keys in Escape mode
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-
 " FileTypes
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
