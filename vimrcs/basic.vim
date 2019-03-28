@@ -13,9 +13,6 @@ set timeoutlen=600
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
 
-" Esc
-imap fd <Esc>
-
 " Colorscheme
 colorscheme Monokai
 set background=dark
