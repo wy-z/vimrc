@@ -17,12 +17,17 @@ map ? <Plug>(incsearch-backward)
 
 " fzf
 let g:fzf_buffers_jump = 1
-nmap <leader>p :Files<cr>
+nmap <leader>p :PFiles<cr>
 nmap <leader>j :BTags<cr>
 nmap <leader>s :BLines<cr>
 nmap <leader>b :Buffers<cr>
 nmap <leader><leader> :Commands<cr>
 nmap <leader>/ :Rg<cr>
+
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+command! PFiles execute 'Files' s:find_git_root()
 
 " ctrlsf.vim
 nmap     <leader>ff <Plug>CtrlSFPrompt
