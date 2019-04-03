@@ -9,6 +9,7 @@ set ignorecase
 set smartcase
 set autoread
 set timeoutlen=600
+set termguicolors
 
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
