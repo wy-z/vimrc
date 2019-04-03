@@ -33,12 +33,6 @@ nnoremap <C-l> <C-W>l
 set foldmethod=indent
 set foldopen=all
 
-" FileTypes
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType sh setlocal ts=4 sts=4 sw=4 expandtab
-autocmd FileType proto setlocal ts=4 sts=4 sw=4 expandtab
-
 " Terminal
 if has('nvim')
     nmap <leader>` :terminal<cr>i
