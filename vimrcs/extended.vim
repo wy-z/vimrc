@@ -53,7 +53,7 @@ let g:indentLine_setColors = 1
 
 " neomake
 call neomake#configure#automake('w')
-let g:neomake_open_list = 1
+let g:neomake_open_list = 2
 
 " neoformat
 let g:neoformat_run_all_formatters = 1
