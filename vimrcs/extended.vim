@@ -56,6 +56,7 @@ call neomake#configure#automake('w')
 let g:neomake_open_list = 1
 
 " neoformat
+let g:neoformat_run_all_formatters = 1
 augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
