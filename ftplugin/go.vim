@@ -17,7 +17,7 @@ let g:neomake_go_golint_maker = {
             \ '%I%f:%l:%c: %m,' .
             \ '%-G%.%#'
 	\ }
-let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
+let g:neomake_go_enabled_makers = ['golangci_lint']
 
 " neoformat
 let g:neoformat_enabled_go = ['goimports']
