@@ -1,12 +1,4 @@
 
-" YCM
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" Move up and down in autocomplete with <c-j> and <c-k>
-inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-
 " Vim-Gitgutter
 set updatetime=250
 let g:gitgutter_enabled = 1

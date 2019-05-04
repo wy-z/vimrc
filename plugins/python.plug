@@ -1,0 +1,4 @@
+
+" Python extension for coc.nvim
+Plug 'neoclide/coc-python'
+
