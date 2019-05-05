@@ -54,14 +54,14 @@ augroup fmt
   au BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
- " vim-gutentags
- let g:gutentags_cache_dir = expand('~/.cache/tags')
+" vim-gutentags
+let g:gutentags_cache_dir = expand('~/.cache/tags')
 
- " emmet
- let g:user_emmet_install_global = 0
- autocmd FileType html,css,vue EmmetInstall
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,vue EmmetInstall
 
- " coc.vim
+" coc.vim
 " Move up and down in autocomplete with <c-j> and <c-k>
 inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
