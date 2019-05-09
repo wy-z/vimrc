@@ -62,6 +62,18 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css,vue EmmetInstall
 
 " coc.vim
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 " Move up and down in autocomplete with <c-j> and <c-k>
 inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
