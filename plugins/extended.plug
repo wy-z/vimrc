@@ -58,5 +58,6 @@ Plug 'mattn/emmet-vim'
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 
-" Intellisense engine for vim8 & neovim
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+" A code-completion engine for Vim
+Plug 'Valloric/YouCompleteMe'
+
