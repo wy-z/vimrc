@@ -9,7 +9,7 @@ map ? <Plug>(incsearch-backward)
 
 " fzf
 let g:fzf_buffers_jump = 1
-nmap <leader>p :Files<cr>
+nmap <leader>p :GFiles<cr>
 nmap <leader>j :BTags<cr>
 nmap <leader>s :BLines<cr>
 nmap <leader>b :Buffers<cr>
