@@ -9,6 +9,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_info_mode = 'gopls'
 let g:go_def_mode = 'gopls'
+nmap <leader>j :GoDecls<cr>
 
 " neomake
 let g:neomake_go_enabled_makers = ['golangci_lint']
