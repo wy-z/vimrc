@@ -57,7 +57,7 @@ augroup END
 
 " emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,vue EmmetInstall
+autocmd FileType html,css EmmetInstall
 
 " YCM
 let g:ycm_complete_in_comments = 1
