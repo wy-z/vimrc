@@ -15,7 +15,7 @@ let mapleader = "\<space>"
 let g:mapleader = "\<space>"
 
 " Colorscheme
-colorscheme gruvbox
+colorscheme Monokai
 set background=dark
 
 " Highlight
