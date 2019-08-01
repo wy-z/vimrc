@@ -62,3 +62,10 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 " Move up and down in autocomplete with <c-j> and <c-k>
 inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+" LSP
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'sh': ['bash-language-server', 'start']
+    \ }
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
