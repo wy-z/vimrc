@@ -53,6 +53,11 @@ augroup END
 
 " vim-gutentags
 let g:gutentags_cache_dir = expand('~/.cache/tags')
+let g:gutentags_file_list_command = {
+   \ 'markers': {
+       \ '.git': 'git ls-files',
+       \ },
+   \ }
 
 " emmet
 let g:user_emmet_install_global = 0
