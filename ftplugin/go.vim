@@ -18,3 +18,6 @@ let g:neomake_go_enabled_makers = ['golangci_lint']
 " neoformat
 let g:neoformat_enabled_go = ['goimports']
 
+" gutentags
+let g:gutentags_enabled = 0
+
