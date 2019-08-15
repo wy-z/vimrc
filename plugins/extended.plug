@@ -24,6 +24,9 @@ Plug 'tpope/vim-repeat'
 " sleuth.vim: Heuristically set buffer options
 Plug 'tpope/vim-sleuth'
 
+" A Vim plugin that manages your tag files
+Plug 'ludovicchabant/vim-gutentags'
+
 " The missing motion for Vim
 Plug 'justinmk/vim-sneak'
 

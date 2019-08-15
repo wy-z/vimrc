@@ -51,6 +51,9 @@ augroup fmt
   au BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
+" vim-gutentags
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
 " emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
