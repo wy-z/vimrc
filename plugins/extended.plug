@@ -58,6 +58,3 @@ Plug 'terryma/vim-multiple-cursors'
 " A code-completion engine for Vim
 Plug 'Valloric/YouCompleteMe'
 
-" Async Language Server Protocol plugin for vim8 and neovim
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
