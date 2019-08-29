@@ -63,10 +63,39 @@ let g:gutentags_file_list_command = {
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" YCM
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" Move up and down in autocomplete with <c-j> and <c-k>
+" coc.nvim
+" Define extensions
+let g:coc_global_extensions = ["coc-json", "coc-pairs"]
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+    let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+" Use ctrl-j/k to navigate
 inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+" Correct JSON comment highlighting
+autocmd FileType json syntax match Comment +\/\/.\+$+
+" Integration with lightline.vim
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'cocstatus': 'coc#status',
+    \   'currentfunction': 'CocCurrentFunction'
+    \ },
+    \ }

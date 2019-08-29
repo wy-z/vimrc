@@ -40,9 +40,6 @@ Plug 'dyng/ctrlsf.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
  
-" Vim plugin, insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs'
-
 " A vim plugin to display the indention levels with thin vertical lines
 Plug 'yggdroot/indentline'
 
@@ -58,6 +55,8 @@ Plug 'mattn/emmet-vim'
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 
-" A code-completion engine for Vim
-Plug 'Valloric/YouCompleteMe'
-
+" Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" vim source
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
