@@ -1,0 +1,4 @@
+
+" Vim syntax file for solidity
+Plug 'tomlion/vim-solidity'
+
