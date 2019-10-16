@@ -71,3 +71,13 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 " Move up and down in autocomplete with <c-j> and <c-k>
 inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+" lsp configure
+let g:ycm_language_server = 
+  \ [ 
+  \   {
+  \     'name': 'bash-language-server',
+  \     'cmdline': [ 'bash-language-server', "start" ],
+  \     'filetypes': [ 'sh' ]
+  \   }
+  \ ]
+
