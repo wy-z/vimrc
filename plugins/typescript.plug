@@ -1,3 +1,6 @@
 
 " Typescript syntax files for Vim
 Plug 'leafgarland/typescript-vim'
+
+" Make your Vim a TypeScript IDE
+Plug 'Quramy/tsuquyomi'
