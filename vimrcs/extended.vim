@@ -12,6 +12,9 @@ nmap <leader>s :BLines<cr>
 nmap <leader>b :Buffers<cr>
 nmap <leader><leader> :Commands<cr>
 nmap <leader>/ :Rg<cr>
+" Likewise, Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " ctrlsf.vim
 nmap     <leader>ff <Plug>CtrlSFPrompt
