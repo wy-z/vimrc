@@ -1,0 +1,3 @@
+
+" Improved nginx vim plugin (incl. syntax highlighting)
+Plug 'chr4/nginx.vim'
