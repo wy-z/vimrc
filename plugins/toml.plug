@@ -1,0 +1,3 @@
+
+" Vim syntax for TOML
+Plug 'cespare/vim-toml'
