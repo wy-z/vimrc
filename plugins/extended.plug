@@ -69,3 +69,5 @@ Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neco-vim'
 " LSP Completion source for deoplete
 Plug 'Shougo/deoplete-lsp'
+" deoplete source for tag
+Plug 'deoplete-plugins/deoplete-tag'
