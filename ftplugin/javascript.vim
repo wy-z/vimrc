@@ -1,6 +1,7 @@
 
 let g:neoformat_enabled_javascript = ['prettier']
 
+" enable tsserver
+lua require'nvim_lsp'.tsserver.setup{}
 " go def mapping
-nnoremap <buffer> <silent> gd :YcmCompleter GoTo<cr>
-nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>

@@ -58,6 +58,14 @@ Plug 'mattn/emmet-vim'
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 
-" A code-completion engine for Vim
-Plug 'Valloric/YouCompleteMe'
+" Nvim LSP client configurations
+Plug 'neovim/nvim-lsp'
 
+" Dark powered asynchronous completion framework for neovim/Vim8
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Syntax source for neocomplete/deoplete/ncm
+Plug 'Shougo/neco-syntax'
+" The vim source for neocomplete/deoplete
+Plug 'Shougo/neco-vim'
+" LSP Completion source for deoplete
+Plug 'Shougo/deoplete-lsp'

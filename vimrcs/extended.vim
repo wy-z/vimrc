@@ -66,21 +66,8 @@ let g:gutentags_file_list_command = {
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" YCM
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" Move up and down in autocomplete with <c-j> and <c-k>
+" deoplete.nvim
+let g:deoplete#enable_at_startup = 1
+inoremap <silent><expr> <TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-" lsp configure
-let g:ycm_language_server = 
-  \ [ 
-  \   {
-  \     'name': 'bash-language-server',
-  \     'cmdline': [ 'bash-language-server', "start" ],
-  \     'filetypes': [ 'sh' ]
-  \   }
-  \ ]
-

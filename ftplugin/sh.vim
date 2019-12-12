@@ -3,7 +3,7 @@ let g:neomake_sh_enabled_makers=['sh', 'shellcheck']
 
 let g:neoformat_enabled_sh = ['shfmt']
 
+" enable bashls
+lua require'nvim_lsp'.bashls.setup{}
 " go def mapping
-nnoremap <buffer> <silent> gd :YcmCompleter GoTo<cr>
-nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
-
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
