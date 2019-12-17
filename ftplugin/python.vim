@@ -9,6 +9,14 @@ require'nvim_lsp'.pyls.setup{
   settings = {
     pyls = {
       configurationSources = {'flake8'};
+      plugins = {
+        pyflakes = {
+          enabled = false;
+        };
+        flake8 = {
+          enabled = true;
+        };
+      }
     }
   }
 }
