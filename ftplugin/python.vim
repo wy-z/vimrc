@@ -1,5 +1,5 @@
 
-let g:neomake_python_enabled_makers = ['mypy']
+let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 
 let g:neoformat_enabled_python = ['black', 'isort']
 
@@ -12,9 +12,6 @@ require'nvim_lsp'.pyls.setup{
       plugins = {
         pyflakes = {
           enabled = false;
-        };
-        flake8 = {
-          enabled = true;
         };
       }
     }
