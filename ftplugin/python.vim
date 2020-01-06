@@ -8,7 +8,6 @@ call lsp#register_server({
     \ 'name': 'pyls',
     \ 'cmd': {server_info->['pyls']},
     \ 'whitelist': ['python'],
-    \ 'config': {},
     \ })
 
 " go def mapping
