@@ -4,6 +4,13 @@ let g:neomake_sh_enabled_makers=['sh', 'shellcheck']
 let g:neoformat_enabled_sh = ['shfmt']
 
 " enable bashls
-lua require'nvim_lsp'.bashls.setup{}
+call lsp#register_server({
+    \ 'name': 'bash-language-server',
+    \ 'cmd': {server_info->['bash-language-server']},
+    \ 'whitelist': ['sh'],
+    \ })
+
+
 " go def mapping
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <buffer> <silent> gd :LspDefinition<CR>
+

@@ -60,8 +60,10 @@ Plug 'mattn/emmet-vim'
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 
-" Nvim LSP client configurations
-Plug 'neovim/nvim-lsp'
+" async language server protocol plugin for vim and neovim
+Plug 'prabirshrestha/vim-lsp'
+" async.vim is required and is used to normalize jobs between vim8 and neovim
+Plug 'prabirshrestha/async.vim'
 
 " Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -69,7 +71,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
 " The vim source for neocomplete/deoplete
 Plug 'Shougo/neco-vim'
-" LSP Completion source for deoplete
-Plug 'Shougo/deoplete-lsp'
 " deoplete source for tag
 Plug 'deoplete-plugins/deoplete-tag'
+" deoplete source for vim-lsp
+Plug 'lighttiger2505/deoplete-vim-lsp'

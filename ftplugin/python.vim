@@ -4,20 +4,13 @@ let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 let g:neoformat_enabled_python = ['black', 'isort']
 
 " enable pyls
-lua <<EOF
-require'nvim_lsp'.pyls.setup{
-  settings = {
-    pyls = {
-      configurationSources = {'flake8'};
-      plugins = {
-        pyflakes = {
-          enabled = false;
-        };
-      }
-    }
-  }
-}
-EOF
+call lsp#register_server({
+    \ 'name': 'pyls',
+    \ 'cmd': {server_info->['pyls']},
+    \ 'whitelist': ['python'],
+    \ 'config': {},
+    \ })
+
 " go def mapping
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <buffer> <silent> gd :LspDefinition<CR>
 
