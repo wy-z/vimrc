@@ -1,3 +1,6 @@
 
 " Improved nginx vim plugin (incl. syntax highlighting)
 Plug 'chr4/nginx.vim'
+
+" A Filetype plugin for csv files
+Plug 'vim-scripts/csv.vim'
