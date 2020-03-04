@@ -8,7 +8,6 @@ call lsp#register_server({
     \ 'name': 'pyls',
     \ 'cmd': {server_info->['pyls']},
     \ 'whitelist': ['python'],
-    \ 'workspace_config': {'pyls': {'configurationSources': ['flake8']}},
     \ })
 
 " go def mapping

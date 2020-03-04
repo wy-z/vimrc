@@ -73,3 +73,5 @@ inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 
+" vim-lsp
+let g:lsp_diagnostics_enabled = 0 " disable diagnostics support
