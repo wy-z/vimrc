@@ -5,8 +5,8 @@ let g:neoformat_enabled_python = ['black', 'isort']
 
 " enable pyls
 call lsp#register_server({
-    \ 'name': 'pyls',
-    \ 'cmd': {server_info->['pyls']},
+    \ 'name': 'jedi-language-server',
+    \ 'cmd': {server_info->['jedi-language-server']},
     \ 'whitelist': ['python'],
     \ })
 
