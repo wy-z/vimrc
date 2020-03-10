@@ -41,7 +41,3 @@ else
     nmap <leader>` :terminal<cr>
 endif
 
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guifont=SourceCodePro-Bold:h13
-endif
