@@ -75,7 +75,23 @@ inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " vim-lsp
 let g:lsp_diagnostics_enabled = 0 " disable diagnostics support
-" Close preview window with <esc>
+" close preview window with <esc>
 autocmd User lsp_float_opened nmap <buffer> <silent> <esc>
   \ <Plug>(lsp-preview-close)
 autocmd User lsp_float_closed nunmap <buffer> <esc>
+" language servers
+if executable('jedi-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'jedi-language-server',
+        \ 'cmd': {server_info->['jedi-language-server']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+if executable('bash-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'bash-language-server',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
+        \ 'whitelist': ['sh'],
+        \ })
+endif
+
