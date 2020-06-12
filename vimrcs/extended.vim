@@ -79,6 +79,13 @@ let g:lsp_diagnostics_enabled = 0 " disable diagnostics support
 autocmd User lsp_float_opened nmap <buffer> <silent> <esc>
   \ <Plug>(lsp-preview-close)
 autocmd User lsp_float_closed nunmap <buffer> <esc>
+" fix conflicts with 'multiple-cursors'
+function! Multiple_cursors_before()
+  let b:deoplete_disable_auto_complete = 1
+endfunction
+function! Multiple_cursors_after()
+  let b:deoplete_disable_auto_complete = 0
+endfunction
 " language servers
 if executable('jedi-language-server')
     au User lsp_setup call lsp#register_server({
