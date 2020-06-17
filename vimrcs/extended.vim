@@ -75,6 +75,8 @@ inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " vim-lsp
 let g:lsp_diagnostics_enabled = 0 " disable diagnostics support
+" close preview window after completion automatically
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " close preview window with <esc>
 autocmd User lsp_float_opened nmap <buffer> <silent> <esc>
   \ <Plug>(lsp-preview-close)
