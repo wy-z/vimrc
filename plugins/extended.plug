@@ -62,8 +62,6 @@ Plug 'terryma/vim-multiple-cursors'
 
 " async language server protocol plugin for vim and neovim
 Plug 'prabirshrestha/vim-lsp'
-" async.vim is required and is used to normalize jobs between vim8 and neovim
-Plug 'prabirshrestha/async.vim'
 
 " Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
