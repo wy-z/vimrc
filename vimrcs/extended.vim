@@ -17,6 +17,7 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " ctrlsf.vim
+let g:ctrlsf_case_sensitive = 'yes'
 nmap     <leader>ff <Plug>CtrlSFPrompt
 vmap     <leader>ff <Plug>CtrlSFVwordPath
 nnoremap <leader>fo :CtrlSFOpen<CR>
