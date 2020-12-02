@@ -1,6 +1,0 @@
-
-" Typescript syntax files for Vim
-Plug 'leafgarland/typescript-vim'
-
-" React JSX syntax highlighting for vim and Typescript
-Plug 'peitalin/vim-jsx-typescript'

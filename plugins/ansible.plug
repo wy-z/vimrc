@@ -1,3 +1,0 @@
-
-" A vim plugin for syntax highlighting Ansible's common filetypes
-Plug 'pearofducks/ansible-vim'

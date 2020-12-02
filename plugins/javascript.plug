@@ -1,6 +1,0 @@
-
-" The most Accurate Syntax Highlighting Plugin for JavaScript and Flow.js
-Plug 'yuezk/vim-js'
-
-" JSX syntax pretty highlighting for vim
-Plug 'maxmellon/vim-jsx-pretty'

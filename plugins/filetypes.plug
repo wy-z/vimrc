@@ -1,0 +1,49 @@
+
+""" CPP """
+
+" Additional Vim syntax highlighting for C++ (including C++11/14)
+Plug 'octol/vim-cpp-enhanced-highlight'
+
+
+""" Go """
+
+" Go development plugin for Vim
+Plug 'fatih/vim-go'
+
+""" JavaScript/TypeScript """
+
+" The most Accurate Syntax Highlighting Plugin for JavaScript and Flow.js
+Plug 'yuezk/vim-js'
+
+" Typescript syntax files for Vim
+Plug 'leafgarland/typescript-vim'
+
+" JSX syntax pretty highlighting for vim
+Plug 'maxmellon/vim-jsx-pretty'
+
+""" Nginx """
+
+" Improved nginx vim plugin (incl. syntax highlighting)
+Plug 'chr4/nginx.vim'
+
+""" Rust """
+
+" Vim configuration for Rust
+Plug 'rust-lang/rust.vim'
+
+""" Solidity """
+
+" Vim syntax file for solidity
+Plug 'tomlion/vim-solidity'
+
+
+""" TOML """
+
+" Vim syntax for TOML
+Plug 'cespare/vim-toml'
+
+
+""" Ansible """
+
+" A vim plugin for syntax highlighting Ansible's common filetypes
+Plug 'pearofducks/ansible-vim'
