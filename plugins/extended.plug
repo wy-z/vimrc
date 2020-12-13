@@ -23,8 +23,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 " sleuth.vim: Heuristically set buffer options
 Plug 'tpope/vim-sleuth'
-" A Git wrapper so awesome, it should be illegal 
-Plug 'tpope/vim-fugitive'
 
 " A Vim plugin that manages your tag files
 Plug 'ludovicchabant/vim-gutentags'
