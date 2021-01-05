@@ -3,3 +3,10 @@ let g:neoformat_enabled_javascriptreact = ['prettier']
 let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_typescriptreact = ['prettier']
 
+let g:neomake_javascript_enabled_makers=['eslint']
+let g:neomake_javascriptreack_enabled_makers=['eslint']
+let g:neomake_typescript_enabled_makers=['eslint']
+let g:neomake_typescriptreact_enabled_makers=['eslint']
+
+" go def mapping
+nnoremap <buffer> <silent> gd :LspDefinition<CR>
