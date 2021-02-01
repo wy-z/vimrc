@@ -23,6 +23,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 " sleuth.vim: Heuristically set buffer options
 Plug 'tpope/vim-sleuth'
+" Pairs of handy bracket mappings
+Plug 'tpope/vim-unimpaired'
 
 " A Vim plugin that manages your tag files
 Plug 'ludovicchabant/vim-gutentags'
@@ -45,12 +47,6 @@ Plug 'jiangmiao/auto-pairs'
 
 " A vim plugin to display the indention levels with thin vertical lines
 Plug 'yggdroot/indentline'
-
-" Make Vim persist editing state without fuss
-Plug 'zhimsel/vim-stay'
-
-" Range, pattern and substitute preview for Vim
-Plug 'markonm/traces.vim'
 
 " emmet for vim
 Plug 'mattn/emmet-vim'
