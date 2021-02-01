@@ -41,3 +41,5 @@ else
     nmap <leader>` :terminal<cr>
 endif
 
+" File types
+au BufRead,BufNewFile *.plug set filetype=vim

@@ -14,7 +14,7 @@ nmap <leader><leader> :Commands<cr>
 nmap <leader>/ :Rg<cr>
 " Likewise, Files command with preview window
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+      \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " ctrlsf.vim
 let g:ctrlsf_case_sensitive = 'yes'
@@ -25,8 +25,8 @@ nnoremap <leader>ft :CtrlSFToggle<CR>
 
 " ripgrep
 if executable("rg")
-    set grepprg=rg\ --vimgrep\ --no-heading
-    set grepformat=%f:%l:%c:%m,%f:%l:%m
+  set grepprg=rg\ --vimgrep\ --no-heading
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
 " Vim sneak
@@ -58,10 +58,10 @@ augroup END
 " vim-gutentags
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_file_list_command = {
-   \ 'markers': {
-       \ '.git': 'git ls-files',
-       \ },
-   \ }
+      \ 'markers': {
+      \ '.git': 'git ls-files',
+      \ },
+      \ }
 
 " emmet
 let g:user_emmet_install_global = 0
@@ -81,7 +81,7 @@ let g:lsp_documentation_float = 0 " disable floating window documentation
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " close preview window with <esc>
 autocmd User lsp_float_opened nmap <buffer> <silent> <esc>
-  \ <Plug>(lsp-preview-close)
+      \ <Plug>(lsp-preview-close)
 autocmd User lsp_float_closed nunmap <buffer> <esc>
 " fix conflicts with 'multiple-cursors'
 func! Multiple_cursors_before()
@@ -97,28 +97,4 @@ func! Multiple_cursors_after()
     call deoplete#enable()
   endif
 endfunc
-
-" language servers
-if executable('jedi-language-server')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'jedi-language-server',
-        \ 'cmd': {server_info->['jedi-language-server']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-if executable('bash-language-server')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'bash-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
-        \ 'whitelist': ['sh'],
-        \ })
-endif
-if executable('typescript-language-server')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'typescript-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-        \ 'whitelist': ['typescript', 'typescript.tsx', 'typescriptreact'],
-        \ })
-endif
 
