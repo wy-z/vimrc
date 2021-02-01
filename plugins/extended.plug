@@ -67,3 +67,7 @@ Plug 'Shougo/neco-vim'
 Plug 'deoplete-plugins/deoplete-tag'
 " deoplete source for vim-lsp
 Plug 'lighttiger2505/deoplete-vim-lsp'
+
+" The interactive scratchpad for hackers.
+Plug 'metakirby5/codi.vim'
+
