@@ -1,5 +1,7 @@
 
-" language servers
+"" language servers
+
+" python
 if executable('jedi-language-server')
     au User lsp_setup call lsp#register_server({
                 \ 'name': 'jedi-language-server',
@@ -7,6 +9,8 @@ if executable('jedi-language-server')
                 \ 'whitelist': ['python'],
                 \ })
 endif
+
+" sh
 if executable('bash-language-server')
     au User lsp_setup call lsp#register_server({
                 \ 'name': 'bash-language-server',
@@ -14,6 +18,8 @@ if executable('bash-language-server')
                 \ 'whitelist': ['sh'],
                 \ })
 endif
+
+" typescript
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
                 \ 'name': 'typescript-language-server',
