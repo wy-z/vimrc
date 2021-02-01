@@ -15,7 +15,7 @@ let mapleader = "\<space>"
 let g:mapleader = "\<space>"
 
 " Colorscheme
-colorscheme Monokai
+colorscheme Dracula
 set background=dark
 
 " Highlight
