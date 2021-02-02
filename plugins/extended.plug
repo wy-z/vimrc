@@ -48,6 +48,12 @@ Plug 'jiangmiao/auto-pairs'
 " A vim plugin to display the indention levels with thin vertical lines
 Plug 'yggdroot/indentline'
 
+" Make Vim persist editing state without fuss
+Plug 'zhimsel/vim-stay'
+
+" Range, pattern and substitute preview for Vim
+Plug 'markonm/traces.vim'
+
 " emmet for vim
 Plug 'mattn/emmet-vim'
 
@@ -71,3 +77,8 @@ Plug 'lighttiger2505/deoplete-vim-lsp'
 " The interactive scratchpad for hackers.
 Plug 'metakirby5/codi.vim'
 
+" Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
+Plug 'embear/vim-localvimrc'
+
+" Better whitespace highlighting for Vim
+Plug 'ntpeters/vim-better-whitespace'
