@@ -41,7 +41,7 @@ Plug 'dyng/ctrlsf.vim'
 " If installed using Homebrew
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
- 
+
 " Vim plugin, insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
@@ -73,9 +73,6 @@ Plug 'Shougo/neco-vim'
 Plug 'deoplete-plugins/deoplete-tag'
 " deoplete source for vim-lsp
 Plug 'lighttiger2505/deoplete-vim-lsp'
-
-" The interactive scratchpad for hackers.
-Plug 'metakirby5/codi.vim'
 
 " Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
 Plug 'embear/vim-localvimrc'
