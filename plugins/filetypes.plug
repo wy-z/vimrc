@@ -47,3 +47,9 @@ Plug 'cespare/vim-toml'
 
 " A vim plugin for syntax highlighting Ansible's common filetypes
 Plug 'pearofducks/ansible-vim'
+
+
+""" Markdown """
+
+" Markdown Vim Mode
+Plug 'plasticboy/vim-markdown'
