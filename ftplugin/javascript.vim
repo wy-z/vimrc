@@ -8,5 +8,8 @@ let g:neomake_javascriptreack_enabled_makers=['eslint']
 let g:neomake_typescript_enabled_makers=['eslint']
 let g:neomake_typescriptreact_enabled_makers=['eslint']
 
+" include node_modules bin dir
+let $PATH .= ':'.$PWD.'/node_modules/.bin'
+
 " go def mapping
 nnoremap <buffer> <silent> gd :LspDefinition<CR>
