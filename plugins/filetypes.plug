@@ -53,3 +53,8 @@ Plug 'pearofducks/ansible-vim'
 
 " Markdown Vim Mode
 Plug 'plasticboy/vim-markdown'
+
+""" Fish """
+
+" Vim support for editing fish scripts
+Plug 'dag/vim-fish'
