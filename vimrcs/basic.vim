@@ -10,6 +10,7 @@ set smartcase
 set autoread
 set timeoutlen=600
 set termguicolors
+set shell=/bin/bash
 
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
@@ -19,10 +20,10 @@ colorscheme Dracula
 set background=dark
 
 " Highlight
-set colorcolumn=80,100 
+set colorcolumn=80,100
 set cursorline
 set cursorcolumn
-au BufWinEnter * if &filetype == '' | setlocal nocursorline nocursorcolumn colorcolumn= | endif 
+au BufWinEnter * if &filetype == '' | setlocal nocursorline nocursorcolumn colorcolumn= | endif
 
 " Smart way to move between windows
 nnoremap <C-j> <C-W>j
