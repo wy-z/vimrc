@@ -10,7 +10,6 @@ set smartcase
 set autoread
 set timeoutlen=600
 set termguicolors
-set shell=/bin/bash
 
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
