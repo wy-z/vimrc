@@ -45,10 +45,6 @@ augroup fmt
   au BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
-" emmet
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
 " vim-localvimrc
 let g:localvimrc_ask = 0
 
@@ -60,9 +56,8 @@ let g:strip_whitespace_confirm = 0
 " nvim-lua/completion-nvim
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-k>"
+inoremap <expr> <C-j>   pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
