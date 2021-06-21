@@ -26,9 +26,6 @@ Plug 'tpope/vim-sleuth'
 " Pairs of handy bracket mappings
 Plug 'tpope/vim-unimpaired'
 
-" A Vim plugin that manages your tag files
-Plug 'ludovicchabant/vim-gutentags'
-
 " The missing motion for Vim
 Plug 'justinmk/vim-sneak'
 
@@ -37,10 +34,6 @@ Plug 'christoomey/vim-system-copy'
 
 " An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
 Plug 'dyng/ctrlsf.vim'
-
-" If installed using Homebrew
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
 
 " Vim plugin, insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
@@ -60,22 +53,22 @@ Plug 'mattn/emmet-vim'
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 
-" async language server protocol plugin for vim and neovim
-Plug 'prabirshrestha/vim-lsp'
-
-" Dark powered asynchronous completion framework for neovim/Vim8
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Syntax source for neocomplete/deoplete/ncm
-Plug 'Shougo/neco-syntax'
-" The vim source for neocomplete/deoplete
-Plug 'Shougo/neco-vim'
-" deoplete source for tag
-Plug 'deoplete-plugins/deoplete-tag'
-" deoplete source for vim-lsp
-Plug 'lighttiger2505/deoplete-vim-lsp'
-
 " Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
 Plug 'embear/vim-localvimrc'
 
 " Better whitespace highlighting for Vim
 Plug 'ntpeters/vim-better-whitespace'
+
+" Find, Filter, Preview, Pick. All lua, all the time.
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" A async completion framework aims to provide completion to neovim's built in LSP written in Lua
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-treesitter/completion-treesitter'
+Plug 'steelsojka/completion-buffers'
+
+" Quickstart configurations for the Nvim LSP client
+Plug 'neovim/nvim-lspconfig'

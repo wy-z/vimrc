@@ -12,4 +12,4 @@ let g:neomake_typescriptreact_enabled_makers=['eslint']
 let $PATH .= ':'.$PWD.'/node_modules/.bin'
 
 " go def mapping
-nnoremap <buffer> <silent> gd :LspDefinition<CR>
+nnoremap <buffer> <silent> gd :lua vim.lsp.buf.definition()<CR>

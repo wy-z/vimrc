@@ -3,18 +3,14 @@
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 
-" fzf
-let g:fzf_buffers_jump = 1
-nmap <leader>p :GFiles<cr>
-nmap <leader>pp :Files<cr>
-nmap <leader>j :BTags<cr>
-nmap <leader>s :BLines<cr>
-nmap <leader>b :Buffers<cr>
-nmap <leader><leader> :Commands<cr>
-nmap <leader>/ :Rg<cr>
-" Likewise, Files command with preview window
-command! -bang -nargs=? -complete=dir Files
-      \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+" telescope.nvim
+nmap <leader>p :Telescope git_files<cr>
+nmap <leader>pp :Telescope find_files<cr>
+nmap <leader>j :Telescope treesitter<cr>
+nmap <leader>s :Telescope current_buffer_fuzzy_find<cr>
+nmap <leader>b :Telescope buffers<cr>
+nmap <leader><leader> :Telescope commands<cr>
+nmap <leader>/ :Telescope live_grep<cr>
 
 " ctrlsf.vim
 let g:ctrlsf_case_sensitive = 'yes'
@@ -22,12 +18,6 @@ nmap     <leader>ff <Plug>CtrlSFPrompt
 vmap     <leader>ff <Plug>CtrlSFVwordPath
 nnoremap <leader>fo :CtrlSFOpen<CR>
 nnoremap <leader>ft :CtrlSFToggle<CR>
-
-" ripgrep
-if executable("rg")
-  set grepprg=rg\ --vimgrep\ --no-heading
-  set grepformat=%f:%l:%c:%m,%f:%l:%m
-endif
 
 " Vim sneak
 let g:sneak#label = 1
@@ -55,48 +45,9 @@ augroup fmt
   au BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 
-" vim-gutentags
-let g:gutentags_cache_dir = expand('~/.cache/tags')
-let g:gutentags_file_list_command = {
-      \ 'markers': {
-      \ '.git': 'git ls-files',
-      \ },
-      \ }
-
 " emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
-" deoplete.nvim
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-
-
-" vim-lsp
-let g:lsp_diagnostics_enabled = 0 " disable diagnostics support
-let g:lsp_documentation_float = 0 " disable floating window documentation
-" close preview window after completion automatically
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-" close preview window with <esc>
-autocmd User lsp_float_opened nmap <buffer> <silent> <esc>
-      \ <Plug>(lsp-preview-close)
-autocmd User lsp_float_closed nunmap <buffer> <esc>
-" fix conflicts with 'multiple-cursors'
-func! Multiple_cursors_before()
-  if deoplete#is_enabled()
-    call deoplete#disable()
-    let g:deoplete_is_enable_before_multi_cursors = 1
-  else
-    let g:deoplete_is_enable_before_multi_cursors = 0
-  endif
-endfunc
-func! Multiple_cursors_after()
-  if g:deoplete_is_enable_before_multi_cursors
-    call deoplete#enable()
-  endif
-endfunc
 
 " vim-localvimrc
 let g:localvimrc_ask = 0
@@ -105,3 +56,22 @@ let g:localvimrc_ask = 0
 let g:strip_whitespace_on_save = 1
 let g:strip_whitelines_at_eof = 1
 let g:strip_whitespace_confirm = 0
+
+" nvim-lua/completion-nvim
+" Use completion-nvim in every buffer
+autocmd BufEnter * lua require'completion'.on_attach()
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-k>"
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+" Avoid showing message extra message when using completion
+set shortmess+=c
+let g:completion_chain_complete_list = {
+      \'default' : [
+	\    {'complete_items': ['lsp', 'buffers', 'ts']},
+	\    {'mode': '<c-p>'},
+	\    {'mode': '<c-n>'}
+	\],
+	\'TelescopePrompt': []
+	\}
