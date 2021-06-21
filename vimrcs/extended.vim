@@ -56,6 +56,8 @@ let g:strip_whitespace_confirm = 0
 " nvim-lua/completion-nvim
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <C-j>   pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 " Set completeopt to have a better completion experience
