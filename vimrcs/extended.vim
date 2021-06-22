@@ -11,6 +11,19 @@ nmap <leader>s :Telescope current_buffer_fuzzy_find<cr>
 nmap <leader>b :Telescope buffers<cr>
 nmap <leader><leader> :Telescope commands<cr>
 nmap <leader>/ :Telescope live_grep<cr>
+lua << EOF
+local actions = require('telescope.actions')
+require('telescope').setup{
+defaults = {
+  mappings = {
+    i = {
+      ["<C-j>"] = actions.move_selection_next,
+      ["<C-k>"] = actions.move_selection_previous,
+      },
+    },
+  }
+}
+EOF
 
 " ctrlsf.vim
 let g:ctrlsf_case_sensitive = 'yes'
@@ -64,6 +77,10 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
+let g:completion_sorting = "length"
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+let g:completion_trigger_keyword_length = 2
+let g:completion_timer_cycle = 200
 let g:completion_chain_complete_list = {
       \'default' : [
 	\    {'complete_items': ['lsp', 'buffers', 'ts']},

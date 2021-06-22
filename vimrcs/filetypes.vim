@@ -1,4 +1,3 @@
-"" language servers
 
 " python
 lua << EOF
