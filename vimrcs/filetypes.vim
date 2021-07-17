@@ -13,3 +13,8 @@ EOF
 lua << EOF
 require'lspconfig'.tsserver.setup{}
 EOF
+
+" golang
+lua << EOF
+require'lspconfig'.gopls.setup{}
+EOF

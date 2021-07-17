@@ -1,10 +1,4 @@
 
-""" Go """
-
-" Go development plugin for Vim
-Plug 'fatih/vim-go'
-
-
 """ JavaScript/TypeScript """
 
 " The most Accurate Syntax Highlighting Plugin for JavaScript and Flow.js
