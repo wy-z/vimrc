@@ -69,3 +69,7 @@ Plug 'steelsojka/completion-buffers'
 
 " Quickstart configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
+
+" A file explorer tree for neovim written in lua
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'

@@ -89,3 +89,9 @@ let g:completion_chain_complete_list = {
 	\],
 	\'TelescopePrompt': []
 	\}
+
+" nvim-tree
+let g:nvim_tree_disable_netrw = 0
+let g:nvim_tree_auto_close = 1
+let g:nvim_tree_gitignore = 1
+nnoremap <leader>t :NvimTreeToggle<CR>
