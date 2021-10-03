@@ -91,7 +91,13 @@ let g:completion_chain_complete_list = {
 	\}
 
 " nvim-tree
-let g:nvim_tree_disable_netrw = 0
-let g:nvim_tree_auto_close = 1
-let g:nvim_tree_gitignore = 1
+lua <<EOF
+require'nvim-tree'.setup {
+  nvim_tree_gitignore = true,
+  view = {
+    -- if true the tree will resize itself after opening a file
+    auto_resize = true,
+    }
+  }
+EOF
 nnoremap <leader>t :NvimTreeToggle<CR>
