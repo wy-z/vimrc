@@ -101,3 +101,9 @@ require'nvim-tree'.setup {
   }
 EOF
 nnoremap <leader>t :NvimTreeToggle<CR>
+
+" lsp
+nnoremap <buffer> <silent> <leader>gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <buffer> <silent> <leader>gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <leader>gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>

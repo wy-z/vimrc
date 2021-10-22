@@ -10,6 +10,3 @@ let g:neomake_typescriptreact_enabled_makers=['eslint']
 
 " include node_modules bin dir
 let $PATH .= ':'.$PWD.'/node_modules/.bin'
-
-" go def mapping
-nnoremap <buffer> <silent> gd :lua vim.lsp.buf.definition()<CR>
