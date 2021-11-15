@@ -43,3 +43,8 @@ endif
 
 " File types
 au BufRead,BufNewFile *.plug set filetype=vim
+
+" lualine
+lua << END
+require'lualine'.setup()
+END

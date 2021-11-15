@@ -5,5 +5,5 @@ Plug 'tpope/vim-sensible'
 " Dark theme for all the things!
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" A light and configurable statusline/tabline plugin for Vim
-Plug 'itchyny/lightline.vim'
+" A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+Plug 'nvim-lualine/lualine.nvim'
