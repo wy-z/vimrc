@@ -26,8 +26,8 @@ Plug 'tpope/vim-sleuth'
 " Pairs of handy bracket mappings
 Plug 'tpope/vim-unimpaired'
 
-" The missing motion for Vim
-Plug 'justinmk/vim-sneak'
+" Next-generation motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort
+Plug 'ggandor/lightspeed.nvim'
 
 " Vim plugin for cmac_idopying to the system clipboard with text-objects and motions
 Plug 'christoomey/vim-system-copy'

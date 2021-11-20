@@ -32,17 +32,6 @@ vmap     <leader>ff <Plug>CtrlSFVwordPath
 nnoremap <leader>fo :CtrlSFOpen<CR>
 nnoremap <leader>ft :CtrlSFToggle<CR>
 
-" Vim sneak
-let g:sneak#label = 1
-let g:sneak#use_ic_scs = 1
-let g:sneak#s_next = 1
-nmap <leader>f <Plug>Sneak_s
-nmap <leader>F <Plug>Sneak_s
-map f <Plug>Sneak_f
-map F <Plug>Sneak_F
-map t <Plug>Sneak_t
-map T <Plug>Sneak_T
-
 " indentline
 let g:indentLine_enabled = 1
 let g:indentLine_setColors = 1
