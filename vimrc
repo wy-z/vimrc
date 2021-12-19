@@ -31,6 +31,14 @@ packer = require("packer")
 packer.startup(function()
   --- Have packer manage itself
   packer.use "wbthomason/packer.nvim"
+  packer.init {
+    display = {
+      open_fn = function()
+      return require("packer.util").float { border = "single" }
+    end,
+    prompt_border = "single",
+    },
+  }
 
   --- Load all plugin files
   vim.cmd [[
