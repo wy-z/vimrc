@@ -41,10 +41,10 @@ else
     nmap <leader>` :terminal<cr>
 endif
 
-" File types
-au BufRead,BufNewFile *.plug set filetype=vim
+" vim-localvimrc
+let g:localvimrc_ask = 0
 
-" lualine
-lua << END
-require'lualine'.setup()
-END
+" vim-better-whitespace
+let g:strip_whitespace_on_save = 1
+let g:strip_whitelines_at_eof = 1
+let g:strip_whitespace_confirm = 0

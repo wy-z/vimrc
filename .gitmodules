@@ -1,4 +1,0 @@
-[submodule "bundle/vim-plug"]
-	path = bundle/vim-plug
-	url = https://github.com/junegunn/vim-plug.git
-	ignore = dirty

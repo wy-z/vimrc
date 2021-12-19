@@ -1,22 +1,65 @@
+"
+" === Nvim only ===
+"
+if !has('nvim')
+  "Do not execute rest of the script
+  finish
+endif
 
-let s:this_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
-let &rtp.=','.s:this_dir
 
 "
-" Plugins
+" === Bootstrap ===
 "
-call plug#begin('~/.cache/plugged')
+let THIS_DIR = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+let &rtp.=','.THIS_DIR
 
-for fpath in split(globpath(s:this_dir.'/plugins', '*.plug'), '\n')
-  exe 'source' fpath
-endfor
+" Automatically install packer
+let s:packer_install_path = stdpath("data") . "/site/pack/packer/start/packer.nvim"
+if empty(glob(s:packer_install_path))
+  echom "Installing packer ..."
+  let PACKER_BOOTSTRAP = system(["git", "clone", "--depth", "1",
+    \ "https://github.com/wbthomason/packer.nvim", s:packer_install_path])
+  packadd packer.nvim
+endif
 
-" Initialize plugin system
-call plug#end()
 
 "
-" Settings
+" === Plugins ===
 "
-for fpath in split(globpath(s:this_dir.'/vimrcs', '*.vim'), '\n')
-  exe 'source' fpath
+lua <<EOF
+packer = require("packer")
+packer.startup(function()
+  --- Have packer manage itself
+  packer.use "wbthomason/packer.nvim"
+
+  --- Load all plugin files
+  vim.cmd [[
+    for fpath in split(globpath(THIS_DIR.'/plugins', '*.lua'), '\n')
+      exe 'luafile' fpath
+    endfor
+  ]]
+
+  vim.cmd([[
+    augroup packer_user_config
+      autocmd!
+      autocmd BufWritePost plugins/*.lua source <afile> | PackerCompile
+    augroup end
+  ]])
+
+  --- Automatically set up configuration after cloning packer.nvim
+  if PACKER_BOOTSTRAP then
+    packer.sync()
+  end
+end)
+EOF
+
+
+"
+" === Settings ===
+"
+" Load all setting files
+for fpath in split(globpath(THIS_DIR.'/vimrcs', '*'), '\n')
+  if fpath =~ '\.vim$' || fpath =~ '\.lua$'
+    exe 'source' fpath
+  endif
 endfor

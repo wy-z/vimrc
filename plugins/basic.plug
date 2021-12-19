@@ -1,9 +1,0 @@
-
-" Defaults everyone can agree on
-Plug 'tpope/vim-sensible'
-
-" Dark theme for all the things!
-Plug 'dracula/vim', { 'as': 'dracula' }
-
-" A blazing fast and easy to configure neovim statusline plugin written in pure lua.
-Plug 'nvim-lualine/lualine.nvim'
