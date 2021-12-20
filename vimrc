@@ -15,7 +15,7 @@ let &rtp.=','.THIS_DIR
 
 " Automatically install packer
 let s:packer_install_path = stdpath("data") . "/site/pack/packer/start/packer.nvim"
-if empty(glob(s:packer_install_path))
+if empty(glob(s:packer_install_path)) > 0
   echom "Installing packer ..."
   let PACKER_BOOTSTRAP = system(["git", "clone", "--depth", "1",
     \ "https://github.com/wbthomason/packer.nvim", s:packer_install_path])
@@ -28,17 +28,17 @@ endif
 "
 lua <<EOF
 packer = require("packer")
-packer.startup(function()
-  --- Have packer manage itself
-  packer.use "wbthomason/packer.nvim"
-  packer.init {
+packer.init {
     display = {
-      open_fn = function()
-      return require("packer.util").float { border = "single" }
+	open_fn = function()
+	return require("packer.util").float { border = "single" }
     end,
     prompt_border = "single",
     },
-  }
+}
+packer.startup(function()
+  --- Have packer manage itself
+  packer.use "wbthomason/packer.nvim"
 
   --- Load all plugin files
   vim.cmd [[
