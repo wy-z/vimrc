@@ -27,5 +27,5 @@ let g:neomake_open_list = 2
 let g:neoformat_run_all_formatters = 1
 augroup fmt
     autocmd!
-    au BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+    au BufWritePre * try | undojoin | Neoformat | catch /E790/ | Neoformat | endtry
 augroup END
