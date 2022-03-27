@@ -50,7 +50,15 @@ use {
 -- Nvim Treesitter configurations and abstraction layer
 use {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate"
+    run = ":TSUpdate",
+    config = function()
+        require "nvim-treesitter.configs".setup {
+            ensure_installed = "maintained",
+            highlight = {
+                enable = true
+            }
+        }
+    end
 }
 
 -- Quickstart configurations for the Nvim LSP client
