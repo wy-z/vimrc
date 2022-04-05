@@ -71,7 +71,6 @@ use {
     config = function()
         require "nvim-tree".setup {
             disable_netrw = false,
-            auto_close = true,
             git = {
                 ignore = true
             },
