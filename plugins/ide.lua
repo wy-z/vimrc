@@ -53,7 +53,29 @@ use {
     run = ":TSUpdate",
     config = function()
         require "nvim-treesitter.configs".setup {
-            ensure_installed = "maintained",
+            ensure_installed = {
+                "bash",
+                "c",
+                "cpp",
+                "elixir",
+                "erlang",
+                "fish",
+                "gdscript",
+                "go",
+                "gomod",
+                "graphql",
+                "html",
+                "javascript",
+                "json",
+                "lua",
+                "nix",
+                "python",
+                "rust",
+                "toml",
+                "tsx",
+                "typescript",
+                "yaml"
+            },
             highlight = {
                 enable = true
             }
