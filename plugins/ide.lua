@@ -140,7 +140,12 @@ use {
 
 -- LSP signature hint as you type
 use {
-    "ray-x/lsp_signature.nvim"
+    "ray-x/lsp_signature.nvim",
+    config = function()
+        require "lsp_signature".setup {
+            fix_pos = true
+        }
+    end
 }
 
 -- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
