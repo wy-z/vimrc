@@ -92,7 +92,6 @@ use {
     requires = {{"kyazdani42/nvim-web-devicons"}},
     config = function()
         require "nvim-tree".setup {
-            disable_netrw = false,
             git = {
                 ignore = true
             },
@@ -137,6 +136,16 @@ use {
             }
         }
     end
+}
+
+-- LSP signature hint as you type
+use {
+    "ray-x/lsp_signature.nvim"
+}
+
+-- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
+use {
+    "andymass/vim-matchup"
 }
 
 -- Asynchronous linting and make framework
