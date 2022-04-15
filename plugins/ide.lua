@@ -92,12 +92,8 @@ use {
     requires = {{"kyazdani42/nvim-web-devicons"}},
     config = function()
         require "nvim-tree".setup {
-            git = {
-                ignore = true
-            },
-            view = {
-                -- if true the tree will resize itself after opening a file
-                auto_resize = true
+            actions = {
+                open_file = {resize_window = true}
             }
         }
     end
