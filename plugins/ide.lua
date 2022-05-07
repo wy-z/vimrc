@@ -110,7 +110,8 @@ use {
             mapping = {
                 ["<C-k>"] = cmp.mapping.select_prev_item(),
                 ["<C-j>"] = cmp.mapping.select_next_item(),
-                ["<CR>"] = cmp.mapping.confirm {select = true}
+                ["<CR>"] = cmp.mapping.confirm {select = true},
+                ["<Tab>"] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Insert})
             },
             sources = {
                 {name = "nvim_lsp"},
