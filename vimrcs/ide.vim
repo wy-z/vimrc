@@ -7,7 +7,7 @@ nmap <leader>s :Telescope current_buffer_fuzzy_find<cr>
 nmap <leader>b :Telescope buffers<cr>
 nmap <leader><leader> :Telescope commands<cr>
 nmap <leader>/ :Telescope live_grep<cr>
-nmap <leader>// :Telescope grep_string search="" only_sort_text=true<cr>
+nmap <leader>// :Telescope grep_string search="" only_sort_text=true shorten_path=true<cr>
 
 " ctrlsf.vim
 let g:ctrlsf_case_sensitive = 'yes'
