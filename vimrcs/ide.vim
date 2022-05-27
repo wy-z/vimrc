@@ -1,13 +1,13 @@
 
-" telescope.nvim
-nmap <leader>p :Telescope git_files<cr>
-nmap <leader>pp :Telescope find_files<cr>
-nmap <leader>j :Telescope treesitter<cr>
-nmap <leader>s :Telescope current_buffer_fuzzy_find<cr>
-nmap <leader>b :Telescope buffers<cr>
-nmap <leader><leader> :Telescope commands<cr>
-nmap <leader>/ :Telescope live_grep<cr>
-nmap <leader>// :Telescope grep_string search="" only_sort_text=true shorten_path=true<cr>
+" fzf.vim
+let g:fzf_buffers_jump = 1
+nmap <leader>p  :GFiles<cr>
+nmap <leader>pp :Files<cr>
+nmap <leader>j  :BTags<cr>
+nmap <leader>s  :BLines<cr>
+nmap <leader>b  :Buffers<cr>
+nmap <leader><leader> :Commands<cr>
+nmap <leader>/  :Rg<cr>
 
 " ctrlsf.vim
 let g:ctrlsf_case_sensitive = 'yes'
