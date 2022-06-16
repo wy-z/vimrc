@@ -1,13 +1,13 @@
 
 " fzf.vim
 let g:fzf_buffers_jump = 1
-nmap <leader>p  :GFiles<cr>
-nmap <leader>pp :Files<cr>
-nmap <leader>j  :BTags<cr>
-nmap <leader>s  :BLines<cr>
-nmap <leader>b  :Buffers<cr>
-nmap <leader><leader> :Commands<cr>
-nmap <leader>/  :Rg<cr>
+nmap <leader>p  :FzfLua git_files<cr>
+nmap <leader>pp :FzfLua files<cr>
+nmap <leader>s  :FzfLua blines<cr>
+nmap <leader>b  :FzfLua buffers<cr>
+nmap <leader>j  :FzfLua lsp_live_workspace_symbols<cr>
+nmap <leader><leader> :FzfLua Commands<cr>
+nmap <leader>/  :FzfLua grep_project<cr>
 
 " ctrlsf.vim
 let g:ctrlsf_case_sensitive = 'yes'

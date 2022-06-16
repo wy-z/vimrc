@@ -116,6 +116,14 @@ use "sbdchd/neoformat"
 
 -- fzf ❤️  vim
 use {
-    "junegunn/fzf.vim",
-    requires = {{"/opt/homebrew/opt/fzf"}}
+    "ibhagwan/fzf-lua",
+    -- optional for icon support
+    requires = {"kyazdani42/nvim-web-devicons"},
+    config = function()
+        require "fzf-lua".setup {
+            fzf_opts = {
+                ["--layout"] = "default"
+            }
+        }
+    end
 }
