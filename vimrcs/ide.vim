@@ -6,7 +6,7 @@ nmap <leader>pp :FzfLua files<cr>
 nmap <leader>s  :FzfLua blines<cr>
 nmap <leader>b  :FzfLua buffers<cr>
 nmap <leader>j  :FzfLua lsp_document_symbols<cr>
-nmap <leader><leader> :FzfLua Commands<cr>
+nmap <leader><leader> :FzfLua commands<cr>
 nmap <leader>/  :FzfLua grep_project<cr>
 
 " ctrlsf.vim
