@@ -37,9 +37,6 @@ use "tpope/vim-unimpaired"
 -- Next-generation motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort
 use "ggandor/lightspeed.nvim"
 
--- Vim plugin for copying to the system clipboard with text-objects and motions
-use "christoomey/vim-system-copy"
-
 -- autopairs for neovim written by lua
 use {
     "windwp/nvim-autopairs",

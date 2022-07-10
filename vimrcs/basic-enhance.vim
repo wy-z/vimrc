@@ -54,3 +54,10 @@ if executable("rg")
     set grepprg=rg\ --vimgrep\ --no-heading
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
+
+" System clipboard (MacOS)
+nmap cp "+y
+vmap cp "+y
+nmap <d-v> "+p
+inoremap <d-v> <c-r>+
+cnoremap <d-v> <c-r>+
