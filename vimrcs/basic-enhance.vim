@@ -58,6 +58,7 @@ endif
 " System clipboard (MacOS)
 nmap cp "+y
 vmap cp "+y
-nmap <d-v> "+p
+nmap <d-v> "+pi
 inoremap <d-v> <c-r>+
 cnoremap <d-v> <c-r>+
+tnoremap <expr> <d-v> '<c-\><c-n>"+pi'
