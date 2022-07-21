@@ -17,7 +17,7 @@ nnoremap <leader>fo :CtrlSFOpen<CR>
 nnoremap <leader>ft :CtrlSFToggle<CR>
 
 " nvim-tree
-nnoremap <leader>t :NvimTreeToggle<CR>
+nnoremap <leader>tt :NvimTreeToggle<CR>
 
 " neomake
 call neomake#configure#automake('w')
