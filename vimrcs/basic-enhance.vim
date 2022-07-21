@@ -59,6 +59,6 @@ endif
 nmap cp "+y
 vmap cp "+y
 nmap <d-v> "+pi
-inoremap <d-v> <c-r>+
-cnoremap <d-v> <c-r>+
+inoremap <expr> <d-v> '<c-o>"+p'
+cnoremap <expr> <d-v> '<c-o>"+p'
 tnoremap <expr> <d-v> '<c-\><c-n>"+pi'

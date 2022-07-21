@@ -25,6 +25,8 @@ use {
     end
 }
 
+-- sensible.vim: Defaults everyone can agree on
+use "tpope/vim-sensible"
 -- quoting/parenthesizing made simple
 use "tpope/vim-surround"
 -- enable repeating supported plugin maps with '.'
