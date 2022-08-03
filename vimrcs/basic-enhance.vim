@@ -59,6 +59,6 @@ endif
 map cp "+y
 if has("mac")
     map <d-v> "+Pa
-    noremap! <d-v> <c-r>+
+    noremap! <d-v> <c-r><c-o>+
     tnoremap <expr> <d-v> '<c-\><c-n>"+Pi'
 endif
