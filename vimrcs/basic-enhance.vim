@@ -55,10 +55,10 @@ if executable("rg")
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-" System clipboard (MacOS)
-nmap cp "+y
-vmap cp "+y
-nmap <d-v> "+Pa
-inoremap <expr> <d-v> '<c-o>"+P'
-cnoremap <expr> <d-v> '<c-o>"+P'
-tnoremap <expr> <d-v> '<c-\><c-n>"+Pi'
+" System clipboard
+map cp "+y
+if has("mac")
+    map <d-v> "+Pa
+    noremap! <d-v> <c-r>+
+    tnoremap <expr> <d-v> '<c-\><c-n>"+Pi'
+endif
