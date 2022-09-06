@@ -29,3 +29,6 @@ augroup fmt
     autocmd!
     au BufWritePre * try | undojoin | Neoformat | catch /E790/ | Neoformat | endtry
 augroup END
+
+" markdown-preview.nvim
+nnoremap <leader>tm <Plug>MarkdownPreviewToggle
