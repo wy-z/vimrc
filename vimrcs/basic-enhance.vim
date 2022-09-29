@@ -63,7 +63,7 @@ if has("mac")
 	return "<esc>:set paste<cr>a<c-r>+<esc>:set ".op."<cr>a"
     endfunction
 
-    execute "noremap! <expr> <d-v> ".s:cmd_paste()
+    execute "noremap! <d-v> ".s:cmd_paste()
     noremap <d-v> "+Pa
     tnoremap <expr> <d-v> '<c-\><c-n>"+Pi'
 endif
