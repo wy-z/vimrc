@@ -25,10 +25,10 @@ set cursorcolumn
 au BufWinEnter * if &filetype == '' | setlocal nocursorline nocursorcolumn colorcolumn= | endif
 
 " Smart way to move between windows
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-h> <C-W>h
-nnoremap <C-l> <C-W>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " Folding
 set foldmethod=indent
@@ -58,7 +58,12 @@ endif
 " System clipboard
 map cp "+y
 if has("mac")
-    map <d-v> "+Pa
-    noremap! <d-v> <c-r><c-o>+
+    function! s:cmd_paste()
+	let op = &paste?"paste":"nopaste"
+	return "<esc>:set paste<cr>a<c-r>+<esc>:set ".op."<cr>a"
+    endfunction
+
+    execute "noremap! <expr> <d-v> ".s:cmd_paste()
+    noremap <d-v> "+Pa
     tnoremap <expr> <d-v> '<c-\><c-n>"+Pi'
 endif
