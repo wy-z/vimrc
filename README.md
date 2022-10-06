@@ -4,9 +4,5 @@ Personal vim configuration
 
 ### QuickStart
 
-```shell
-git clone git@github.com:wy-z/vimrc.git ~/.vimrc-pers
-cd ~/.vimrc-pers
-echo 'source ~/.vimrc-pers/vimrc' > ~/.vimrc
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-```
+1. Install [LunarVim](https://github.com/LunarVim/LunarVim)
+2. Clone this repo to `$LUNARVIM_RUNTIME_DIR`, e.g. `git clone git@github.com:wy-z/vimrc.git ~/.config/lvim`

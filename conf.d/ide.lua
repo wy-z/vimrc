@@ -45,10 +45,7 @@ for _, v in ipairs({
   {
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
-    ft = "markdown",
-    config = function()
-      vim.g.mkdp_auto_start = 1
-    end,
+    ft = { "markdown" },
   },
 }) do
   table.insert(lvim.plugins, v)
