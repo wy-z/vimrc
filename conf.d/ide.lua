@@ -47,6 +47,14 @@ for _, v in ipairs({
     run = "cd app && npm install",
     ft = { "markdown" },
   },
+  -- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
+  {
+    "andymass/vim-matchup",
+    event = "CursorMoved",
+    config = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+  }
 }) do
   table.insert(lvim.plugins, v)
 end
