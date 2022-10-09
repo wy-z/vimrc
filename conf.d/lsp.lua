@@ -16,12 +16,16 @@ formatters.setup {
     -- python
     { command = "black", filetypes = { "python" } },
     { command = "isort", filetypes = { "python" } },
-
-    -- javascript/typescript
+    -- prettier
     {
         command = "prettier",
-        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact",
+            "markdown", "json", "yaml", "css", "html" },
     },
+    -- shell
+    { command = "shfmt", filetypes = { "sh" } },
+    -- go
+    { command = "goimports", filetypes = { "go" } }
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
