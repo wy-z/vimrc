@@ -80,7 +80,10 @@ for _, v in ipairs(
             config = function()
                 vim.g.matchup_matchparen_offscreen = { method = "popup" }
             end
-        }
+        },
+        -- Justfile support
+        "NoahTheDuke/vim-just",
+        "IndianBoy42/tree-sitter-just"
     }
 ) do
     table.insert(lvim.plugins, v)

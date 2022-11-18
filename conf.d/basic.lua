@@ -18,7 +18,7 @@ if vim.g.neovide then
     )
 end
 -- cursor highlight
-vim.opt.colorcolumn = {80, 100}
+vim.opt.colorcolumn = { 80, 100 }
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 vim.cmd([[
@@ -29,8 +29,7 @@ vim.cmd([[
 -- lvim options
 --
 
-lvim.builtin.notify.active = true
-lvim.builtin.terminal.active = true
+lvim.format_on_save.enabled = true
 
 ---
 --- plugins
