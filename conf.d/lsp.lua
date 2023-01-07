@@ -25,7 +25,9 @@ formatters.setup {
     -- shell
     { command = "shfmt", filetypes = { "sh" } },
     -- go
-    { command = "goimports", filetypes = { "go" } }
+    { command = "goimports", filetypes = { "go" } },
+    -- godot
+    { command = "gdformat", filetypes = { "gdscript" } }
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
@@ -33,4 +35,12 @@ linters.setup {
     -- python
     { command = "flake8", filetypes = { "python" }, },
     { command = "mypy", filetypes = { "python" } },
+    -- godot
+    { command = "gdlint", filetypes = { "gdscript" } }
 }
+
+--
+-- godot
+--
+
+require 'lspconfig'.gdscript.setup {}
