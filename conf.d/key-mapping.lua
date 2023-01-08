@@ -2,11 +2,11 @@
 vim.cmd('map cp "+y')
 if vim.fn.has("mac") then
     local op = vim.opt.paste:get() and "paste" or "nopaste"
-    vim.cmd(string.format("noremap! <d-v> <esc>:set paste<cr>a<c-r>+<esc>:set %s<cr>a", op))
+    vim.cmd(string.format("inoremap <d-v> <esc>:set paste<cr>a<c-r>+<esc>:set %s<cr>a", op))
     vim.cmd([[
     noremap <d-v> "+Pa
-    tnoremap <expr> <d-v> '<c-\><c-n>"+Pi'
-  ]])
+    cnoremap <d-v> <c-r>+
+  ]] )
 end
 
 -- which keys
@@ -20,12 +20,12 @@ lvim.builtin.which_key.mappings = {
     L = lvim_mappings["L"],
     P = lvim_mappings["p"],
     -- custom mappings
-    ["p"] = {"<cmd>Telescope git_files<cr>", "Search `git ls-files`"},
-    ["pp"] = {"<cmd>Telescope find_files<cr>", "Serach files"},
-    ["j"] = {"<cmd>Telescope treesitter<cr>", "Search symbols"},
-    ["s"] = {"<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer"},
-    ["<leader>"] = {"<cmd>Telescope commands<cr>", "Lists commands"},
-    ["/"] = {"<cmd>Telescope live_grep<cr>", "Search text, respects .gitignore"},
+    ["p"] = { "<cmd>Telescope git_files<cr>", "Search `git ls-files`" },
+    ["pp"] = { "<cmd>Telescope find_files<cr>", "Serach files" },
+    ["j"] = { "<cmd>Telescope treesitter<cr>", "Search symbols" },
+    ["s"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
+    ["<leader>"] = { "<cmd>Telescope commands<cr>", "Lists commands" },
+    ["/"] = { "<cmd>Telescope live_grep<cr>", "Search text, respects .gitignore" },
     ["//"] = {
         '<cmd>Telescope grep_string search="" only_sort_text=true shorten_path=true<cr>',
         "Search text"
