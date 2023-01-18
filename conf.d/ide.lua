@@ -70,7 +70,7 @@ for _, v in ipairs(
         -- markdown preview plugin for (neo)vim
         {
             "iamcco/markdown-preview.nvim",
-            run = "cd app && npm install",
+            build = "cd app && npm install",
             ft = { "markdown" }
         },
         -- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen

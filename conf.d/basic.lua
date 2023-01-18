@@ -3,6 +3,7 @@
 --
 
 vim.o.clipboard = ""
+vim.opt.shell = "/bin/bash" -- https://www.lunarvim.org/docs/troubleshooting#are-you-using-fish
 -- gui options
 vim.o.guifont = "Hack Nerd Font:h13"
 -- neovide
