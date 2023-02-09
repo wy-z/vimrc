@@ -51,7 +51,7 @@ for _, v in ipairs(
         -- 🦘 Neovim's answer to the mouse
         {
             "ggandor/leap.nvim",
-            as = "leap",
+            name = "leap",
             config = function()
                 require("leap").add_default_mappings()
             end,
