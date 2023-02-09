@@ -3,6 +3,7 @@
 --
 
 lvim.builtin.treesitter.ensure_installed = {
+    "vim",
     "bash",
     "c",
     "cpp",
@@ -70,7 +71,10 @@ for _, v in ipairs(
         -- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
         {
             "folke/trouble.nvim",
-            cmd = "TroubleToggle",
+            dependencies = "nvim-tree/nvim-web-devicons",
+            config = function()
+                require("trouble").setup {}
+            end
         },
         -- An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
         "dyng/ctrlsf.vim",

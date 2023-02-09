@@ -29,5 +29,6 @@ lvim.builtin.which_key.mappings = {
     ["//"] = {
         '<cmd>Telescope grep_string search="" only_sort_text=true shorten_path=true<cr>',
         "Search text"
-    }
+    },
+    ["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
 }
