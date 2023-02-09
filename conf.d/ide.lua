@@ -4,6 +4,7 @@
 
 lvim.builtin.treesitter.ensure_installed = {
     "vim",
+    "lua",
     "bash",
     "c",
     "elixir",
@@ -16,7 +17,6 @@ lvim.builtin.treesitter.ensure_installed = {
     "javascript",
     "typescript",
     "tsx",
-    "lua",
     "python",
     "rust",
     "json",
@@ -90,9 +90,6 @@ for _, v in ipairs(
             "iamcco/markdown-preview.nvim",
             build = "cd app && npm install",
             ft = "markdown",
-            config = function()
-                vim.g.mkdp_auto_start = 1
-            end,
         },
         -- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
         {
