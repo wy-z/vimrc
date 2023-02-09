@@ -55,6 +55,18 @@ vim.tbl_deep_extend(
 
 for _, v in ipairs(
     {
+        -- Neovim plugin for GitHub Copilot
+        {
+            "zbirenbaum/copilot-cmp",
+            event = "InsertEnter",
+            dependencies = { "zbirenbaum/copilot.lua" },
+            config = function()
+                vim.defer_fn(function()
+                    require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+                    require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+                end, 100)
+            end,
+        },
         -- An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
         "dyng/ctrlsf.vim",
         -- Sublime Text style multiple selections for Vim
