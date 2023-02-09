@@ -46,10 +46,15 @@ for _, v in ipairs(
         "tpope/vim-sleuth",
         -- Pairs of handy bracket mappings
         "tpope/vim-unimpaired",
-        -- Next-generation motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort
+        -- enable repeating supported plugin maps with "."
+        "tpope/vim-repeat",
+        -- 🦘 Neovim's answer to the mouse
         {
-            "ggandor/lightspeed.nvim",
-            event = "BufRead"
+            "ggandor/leap.nvim",
+            as = "leap",
+            config = function()
+                require("leap").add_default_mappings()
+            end,
         },
         -- Make Vim persist editing state without fuss
         "zhimsel/vim-stay",

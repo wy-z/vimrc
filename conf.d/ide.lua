@@ -67,10 +67,15 @@ for _, v in ipairs(
                 end, 100)
             end,
         },
+        -- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+        {
+            "folke/trouble.nvim",
+            cmd = "TroubleToggle",
+        },
         -- An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
         "dyng/ctrlsf.vim",
-        -- Sublime Text style multiple selections for Vim
-        "terryma/vim-multiple-cursors",
+        -- Multiple cursors plugin for vim/neovim
+        "mg979/vim-visual-multi",
         -- LSP signature hint as you type
         {
             "ray-x/lsp_signature.nvim",
@@ -83,7 +88,10 @@ for _, v in ipairs(
         {
             "iamcco/markdown-preview.nvim",
             build = "cd app && npm install",
-            ft = { "markdown" }
+            ft = "markdown",
+            config = function()
+                vim.g.mkdp_auto_start = 1
+            end,
         },
         -- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
         {
