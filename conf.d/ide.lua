@@ -53,16 +53,60 @@ vim.tbl_deep_extend(
 
 for _, v in ipairs(
     {
+        {
+            "romgrk/nvim-treesitter-context",
+            config = function()
+                require("treesitter-context").setup {
+                    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+                    throttle = true, -- Throttles plugin updates (may improve performance)
+                    max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+                    patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+                        -- For all filetypes
+                        -- Note that setting an entry here replaces all other patterns for this entry.
+                        -- By setting the 'default' entry below, you can control which nodes you want to
+                        -- appear in the context window.
+                        default = {
+                            'class',
+                            'function',
+                            'method',
+                        },
+                    },
+                }
+            end
+        },
         -- Neovim plugin for GitHub Copilot
         {
             "zbirenbaum/copilot-cmp",
             event = "InsertEnter",
             dependencies = { "zbirenbaum/copilot.lua" },
             config = function()
-                vim.defer_fn(function()
-                    require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
-                    require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
-                end, 100)
+                require("copilot").setup({
+                    suggestion = { enabled = false },
+                    panel = { enabled = false },
+                })
+                require("copilot_cmp").setup({
+                    formatters = {
+                        -- remove extraneous characters such as extra ending parenthesis
+                        insert_text = require("copilot_cmp.format").remove_existing
+                    },
+                })
+                local cmp = require('cmp')
+                local cr_confirm = cmp.mapping["<CR>"]
+                local copilot_confirm = cmp.mapping.confirm({
+                    select = true,
+                    behavior = cmp.ConfirmBehavior.Replace,
+                })
+                cmp.setup({
+                    mapping = {
+                        ["<CR>"] = function(...)
+                            local entry = cmp.get_selected_entry()
+                            if entry and entry.source.name == "copilot" then
+                                return copilot_confirm(...)
+                            end
+                            return cr_confirm(...)
+                        end,
+                    }
+                })
             end,
         },
         -- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
