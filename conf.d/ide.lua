@@ -91,7 +91,9 @@ for _, v in ipairs(
                     },
                 })
                 local cmp = require('cmp')
-                local cr_confirm = cmp.mapping["<CR>"]
+                local cr_confirm = cmp.mapping["<CR>"] or cmp.mapping.confirm({
+                    select = true
+                })
                 local copilot_confirm = cmp.mapping.confirm({
                     select = true,
                     behavior = cmp.ConfirmBehavior.Replace,
