@@ -74,12 +74,6 @@ for _, v in ipairs(
                 }
             end
         },
-        -- Syntax aware text-objects, select, move, swap, and peek support.
-        {
-            "nvim-treesitter/nvim-treesitter-textobjects",
-            after = "nvim-treesitter",
-            requires = "nvim-treesitter/nvim-treesitter",
-        },
         -- Neovim plugin for GitHub Copilot
         {
             "zbirenbaum/copilot-cmp",
