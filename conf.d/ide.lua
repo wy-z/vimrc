@@ -74,6 +74,12 @@ for _, v in ipairs(
                 }
             end
         },
+        -- Syntax aware text-objects, select, move, swap, and peek support.
+        {
+            "nvim-treesitter/nvim-treesitter-textobjects",
+            after = "nvim-treesitter",
+            requires = "nvim-treesitter/nvim-treesitter",
+        },
         -- Neovim plugin for GitHub Copilot
         {
             "zbirenbaum/copilot-cmp",
@@ -111,6 +117,18 @@ for _, v in ipairs(
                 })
             end,
         },
+        -- Neovim plugin for interacting with OpenAI GPT-3 chatbot, providing an easy interface for exploring GPT-3 and NLP.
+        {
+            "jackMort/ChatGPT.nvim",
+            config = function()
+                require("chatgpt").setup()
+            end,
+            dependencies = {
+                "MunifTanjim/nui.nvim",
+                "nvim-lua/plenary.nvim",
+                "nvim-telescope/telescope.nvim"
+            }
+        },
         -- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
         {
             "folke/trouble.nvim",
@@ -121,6 +139,10 @@ for _, v in ipairs(
         },
         -- An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
         "dyng/ctrlsf.vim",
+        -- Find the enemy and replace them with dark power.
+        { "windwp/nvim-spectre",
+            dependencies = { "nvim-lua/plenary.nvim", }
+        },
         -- Multiple cursors plugin for vim/neovim
         "mg979/vim-visual-multi",
         -- LSP signature hint as you type
@@ -147,7 +169,32 @@ for _, v in ipairs(
         },
         -- Justfile support
         "NoahTheDuke/vim-just",
-        "IndianBoy42/tree-sitter-just"
+        "IndianBoy42/tree-sitter-just",
+        -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+        {
+            "folke/noice.nvim",
+            config = function()
+                require("noice").setup({
+                    -- fix conflicts
+                    lsp = {
+                        hover = {
+                            enabled = false,
+                        },
+                        signature = {
+                            enabled = false,
+                        },
+                    }
+                })
+            end,
+            dependencies = {
+                -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+                "MunifTanjim/nui.nvim",
+                -- OPTIONAL:
+                --   `nvim-notify` is only needed, if you want to use the notification view.
+                --   If not available, we use `mini` as the fallback
+                "rcarriga/nvim-notify",
+            }
+        }
     }
 ) do
     table.insert(lvim.plugins, v)

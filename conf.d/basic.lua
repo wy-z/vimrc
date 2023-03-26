@@ -58,12 +58,21 @@ for _, v in ipairs(
                 vim.keymap.del({ 'x', 'o' }, 'X')
             end,
         },
-        -- Make Vim persist editing state without fuss
-        "zhimsel/vim-stay",
+        -- Simple session management for Neovim
+        {
+            "folke/persistence.nvim",
+            event = "BufReadPre", -- this will only start session saving when an actual file was opened
+            lazy = true,
+            config = function()
+                require("persistence").setup()
+            end,
+        },
         -- Range, pattern and substitute preview for Vim
         "markonm/traces.vim",
         -- Better whitespace highlighting for Vim
-        "ntpeters/vim-better-whitespace"
+        "ntpeters/vim-better-whitespace",
+        -- Improve startup time for Neovim
+        "lewis6991/impatient.nvim"
     }
 ) do
     table.insert(lvim.plugins, v)
