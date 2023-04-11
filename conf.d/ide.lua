@@ -133,10 +133,6 @@ for _, v in ipairs(
         },
         -- An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
         "dyng/ctrlsf.vim",
-        -- Find the enemy and replace them with dark power.
-        { "windwp/nvim-spectre",
-            dependencies = { "nvim-lua/plenary.nvim", }
-        },
         -- Multiple cursors plugin for vim/neovim
         "mg979/vim-visual-multi",
         -- LSP signature hint as you type

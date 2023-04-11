@@ -15,7 +15,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     -- python
     { command = "black", filetypes = { "python" } },
-    { command = "isort", filetypes = { "python" } },
+    { command = "ruff", filetypes = { "python" } },
     -- prettier
     {
         command = "prettier",
@@ -33,7 +33,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     -- python
-    { command = "flake8", filetypes = { "python" }, },
+    { command = "ruff", filetypes = { "python" }, },
     { command = "mypy", filetypes = { "python" } },
     -- godot
     { command = "gdlint", filetypes = { "gdscript" } }
