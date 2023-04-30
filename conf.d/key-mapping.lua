@@ -20,15 +20,11 @@ lvim.builtin.which_key.mappings = {
     L = lvim_mappings["L"],
     P = lvim_mappings["p"],
     -- custom mappings
-    ["p"] = { "<cmd>Telescope git_files<cr>", "Search `git ls-files`" },
-    ["pp"] = { "<cmd>Telescope find_files<cr>", "Serach files" },
-    ["j"] = { "<cmd>Telescope treesitter<cr>", "Search symbols" },
-    ["s"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
-    ["<leader>"] = { "<cmd>Telescope commands<cr>", "Lists commands" },
-    ["/"] = { "<cmd>Telescope live_grep<cr>", "Search text, respects .gitignore" },
-    ["//"] = {
-        '<cmd>Telescope grep_string search="" only_sort_text=true shorten_path=true<cr>',
-        "Search text"
-    },
+    ["p"] = { "<cmd>lua require('fzf-lua').git_files()<cr>", "Search `git ls-files`" },
+    ["pp"] = { "<cmd>lua require('fzf-lua').files()<cr>", "Serach files" },
+    ["j"] = { "<cmd>lua require('fzf-lua').lsp_document_symbols()<cr>", "Search symbols" },
+    ["s"] = { "<cmd>lua require('fzf-lua').blines()<cr>", "Search current buffer" },
+    ["<leader>"] = { "<cmd>lua require('fzf-lua').commands()<cr>", "Lists commands" },
+    ["/"] = { "<cmd>lua require('fzf-lua').live_grep()<cr>", "Search text, respects .gitignore" },
     ["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
 }

@@ -24,35 +24,23 @@ lvim.builtin.treesitter.ensure_installed = {
     "toml",
 }
 
--- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
--- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
-local _, actions = pcall(require, "telescope.actions")
-lvim.builtin.telescope.defaults.mappings =
-vim.tbl_deep_extend(
-    "force",
-    lvim.builtin.telescope.defaults.mappings,
-    {
-        -- for input mode
-        i = {
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous,
-            ["<C-n>"] = actions.cycle_history_next,
-            ["<C-p>"] = actions.cycle_history_prev
-        },
-        -- for normal mode
-        n = {
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous
-        }
-    }
-)
-
 --
 -- plugins
 --
 
 for _, v in ipairs(
     {
+        { 'ibhagwan/fzf-lua',
+            dependencies = { 'nvim-tree/nvim-web-devicons' },
+            require 'fzf-lua'.setup {
+                winopts = {
+                    on_create = function()
+                        vim.keymap.set("t", "<C-j>", "<Down>", { silent = true, buffer = true })
+                        vim.keymap.set("t", "<C-k>", "<Up>", { silent = true, buffer = true })
+                    end,
+                }
+            }
+        },
         {
             "romgrk/nvim-treesitter-context",
             config = function()
@@ -86,18 +74,6 @@ for _, v in ipairs(
                 })
                 require("copilot_cmp").setup({})
             end,
-        },
-        -- Neovim plugin for interacting with OpenAI GPT-3 chatbot, providing an easy interface for exploring GPT-3 and NLP.
-        {
-            "jackMort/ChatGPT.nvim",
-            config = function()
-                require("chatgpt").setup()
-            end,
-            dependencies = {
-                "MunifTanjim/nui.nvim",
-                "nvim-lua/plenary.nvim",
-                "nvim-telescope/telescope.nvim"
-            }
         },
         -- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
         {
