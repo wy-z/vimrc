@@ -84,31 +84,7 @@ for _, v in ipairs(
                     suggestion = { enabled = false },
                     panel = { enabled = false },
                 })
-                require("copilot_cmp").setup({
-                    formatters = {
-                        -- remove extraneous characters such as extra ending parenthesis
-                        insert_text = require("copilot_cmp.format").remove_existing
-                    },
-                })
-                local cmp = require('cmp')
-                local cr_confirm = cmp.mapping["<CR>"] or cmp.mapping.confirm({
-                    select = true
-                })
-                local copilot_confirm = cmp.mapping.confirm({
-                    select = true,
-                    behavior = cmp.ConfirmBehavior.Replace,
-                })
-                cmp.setup({
-                    mapping = {
-                        ["<CR>"] = function(...)
-                            local entry = cmp.get_selected_entry()
-                            if entry and entry.source.name == "copilot" then
-                                return copilot_confirm(...)
-                            end
-                            return cr_confirm(...)
-                        end,
-                    }
-                })
+                require("copilot_cmp").setup({})
             end,
         },
         -- Neovim plugin for interacting with OpenAI GPT-3 chatbot, providing an easy interface for exploring GPT-3 and NLP.
