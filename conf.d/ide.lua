@@ -75,6 +75,17 @@ for _, v in ipairs(
                 require("copilot_cmp").setup({})
             end,
         },
+        -- CodeGPT is a plugin for neovim that provides commands to interact with ChatGPT.
+        {
+            "dpayne/CodeGPT.nvim",
+            dependencies = {
+                'nvim-lua/plenary.nvim',
+                'MunifTanjim/nui.nvim',
+            },
+            config = function()
+                require("codegpt.config")
+            end
+        },
         -- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
         {
             "folke/trouble.nvim",
