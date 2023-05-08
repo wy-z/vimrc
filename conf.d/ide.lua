@@ -106,7 +106,6 @@ for _, v in ipairs(
             end
         },
         -- Justfile support
-        "NoahTheDuke/vim-just",
         "IndianBoy42/tree-sitter-just",
         -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
         {
