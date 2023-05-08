@@ -2,10 +2,10 @@
 -- vim options
 --
 
-vim.o.clipboard = ""
+vim.opt.clipboard = ""
 vim.opt.shell = "/bin/bash" -- https://www.lunarvim.org/docs/troubleshooting#are-you-using-fish
 -- gui options
-vim.o.guifont = "Hack Nerd Font:h13"
+vim.opt.guifont = "Hack Nerd Font:h13"
 -- neovide
 if vim.g.neovide then
     -- full screen
@@ -25,6 +25,11 @@ vim.opt.cursorcolumn = true
 vim.cmd([[
   au BufWinEnter * if &filetype == '' | setlocal nocursorline nocursorcolumn colorcolumn= | endif
 ]])
+-- encoding
+vim.cmd([[
+  set fileencodings=ucs-bom,utf-8,gb18030,default,latin1
+]])
+
 
 --
 -- lvim options
