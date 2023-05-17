@@ -5,7 +5,7 @@
 vim.opt.clipboard = ""
 vim.opt.shell = "/bin/bash" -- https://www.lunarvim.org/docs/troubleshooting#are-you-using-fish
 -- gui options
-vim.opt.guifont = "Hack Nerd Font:h13"
+vim.opt.guifont = "Hack Nerd Font:h14"
 -- neovide
 if vim.g.neovide then
     -- full screen
@@ -71,7 +71,9 @@ for _, v in ipairs(
         -- Better whitespace highlighting for Vim
         "ntpeters/vim-better-whitespace",
         -- Improve startup time for Neovim
-        "lewis6991/impatient.nvim"
+        "lewis6991/impatient.nvim",
+        -- Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
+        "embear/vim-localvimrc"
     }
 ) do
     table.insert(lvim.plugins, v)
