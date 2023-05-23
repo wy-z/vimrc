@@ -3,7 +3,10 @@
 --
 
 lvim.lsp.installer.setup.ensure_installed = {
-    "jedi_language_server", "bashls", "tsserver", "gopls"
+	"jedi_language_server",
+	"bashls",
+	"tsserver",
+	"gopls",
 }
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 
@@ -11,36 +14,47 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 -- null-ls
 --
 
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-    -- python
-    { command = "black", filetypes = { "python" } },
-    { command = "ruff", filetypes = { "python" } },
-    -- prettier
-    {
-        command = "prettier",
-        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact",
-            "markdown", "json", "yaml", "css", "html" },
-    },
-    -- shell
-    { command = "shfmt", filetypes = { "sh" } },
-    -- go
-    { command = "goimports", filetypes = { "go" } },
-    -- godot
-    { command = "gdformat", filetypes = { "gdscript" } }
-}
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+	-- python
+	{ command = "black", filetypes = { "python" } },
+	{ command = "ruff", filetypes = { "python" } },
+	-- prettier
+	{
+		command = "prettier",
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"javascript",
+			"javascriptreact",
+			"markdown",
+			"json",
+			"yaml",
+			"css",
+			"html",
+		},
+	},
+	-- shell
+	{ command = "shfmt", filetypes = { "sh" } },
+	-- go
+	{ command = "goimports", filetypes = { "go" } },
+	-- godot
+	{ command = "gdformat", filetypes = { "gdscript" } },
+	-- lua
+	{ command = "stylua", filetypes = { "lua" } },
+})
 
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-    -- python
-    { command = "ruff", filetypes = { "python" }, },
-    { command = "mypy", filetypes = { "python" } },
-    -- godot
-    { command = "gdlint", filetypes = { "gdscript" } }
-}
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+	-- python
+	{ command = "ruff", filetypes = { "python" } },
+	{ command = "mypy", filetypes = { "python" } },
+	-- godot
+	{ command = "gdlint", filetypes = { "gdscript" } },
+})
 
 --
 -- godot
 --
 
-require 'lspconfig'.gdscript.setup {}
+require("lspconfig").gdscript.setup({})
