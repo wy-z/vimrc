@@ -49,15 +49,11 @@ for _, v in ipairs({
 	},
 	-- Neovim plugin for GitHub Copilot
 	{
-		"zbirenbaum/copilot-cmp",
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
 		event = "InsertEnter",
-		dependencies = { "zbirenbaum/copilot.lua" },
 		config = function()
-			require("copilot").setup({
-				suggestion = { enabled = false },
-				panel = { enabled = false },
-			})
-			require("copilot_cmp").setup({})
+			require("copilot").setup({})
 		end,
 	},
 	-- CodeGPT is a plugin for neovim that provides commands to interact with ChatGPT.
@@ -80,7 +76,7 @@ for _, v in ipairs({
 		end,
 	},
 	-- An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
-	"dyng/ctrlsf.vim",
+	{ "nvim-pack/nvim-spectre", dependencies = "nvim-lua/plenary.nvim" },
 	-- Multiple cursors plugin for vim/neovim
 	"mg979/vim-visual-multi",
 	-- LSP signature hint as you type

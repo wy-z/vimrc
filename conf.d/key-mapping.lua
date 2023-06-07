@@ -25,6 +25,7 @@ lvim.builtin.which_key.mappings = {
 	["pp"] = { "<cmd>lua require('fzf-lua').files()<cr>", "Serach files" },
 	["j"] = { "<cmd>lua require('fzf-lua').lsp_document_symbols()<cr>", "Search symbols" },
 	["s"] = { "<cmd>lua require('fzf-lua').lgrep_curbuf()<cr>", "Search current buffer" },
+	["S"] = { "<cmd>lua require('spectre').open()<CR>", "Open Spectre" },
 	["<leader>"] = { "<cmd>lua require('fzf-lua').commands()<cr>", "Lists commands" },
 	["/"] = { "<cmd>lua require('fzf-lua').live_grep()<cr>", "Search text, respects .gitignore" },
 	["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
