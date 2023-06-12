@@ -47,26 +47,6 @@ for _, v in ipairs({
 			require("treesitter-context").setup({})
 		end,
 	},
-	-- Neovim plugin for GitHub Copilot
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({})
-		end,
-	},
-	-- CodeGPT is a plugin for neovim that provides commands to interact with ChatGPT.
-	{
-		"dpayne/CodeGPT.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"MunifTanjim/nui.nvim",
-		},
-		config = function()
-			require("codegpt.config")
-		end,
-	},
 	-- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 	{
 		"folke/trouble.nvim",
@@ -87,12 +67,6 @@ for _, v in ipairs({
 			require("lsp_signature").on_attach()
 		end,
 	},
-	-- markdown preview plugin for (neo)vim
-	{
-		"iamcco/markdown-preview.nvim",
-		build = "cd app && npm install",
-		ft = "markdown",
-	},
 	-- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
 	{
 		"andymass/vim-matchup",
@@ -101,9 +75,6 @@ for _, v in ipairs({
 			vim.g.matchup_matchparen_offscreen = { method = "popup" }
 		end,
 	},
-	-- Justfile support
-	"NoahTheDuke/vim-just",
-	"IndianBoy42/tree-sitter-just",
 	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 	{
 		"folke/noice.nvim",
@@ -129,6 +100,29 @@ for _, v in ipairs({
 			"rcarriga/nvim-notify",
 		},
 	},
+	--- Neovim plugin for intracting with GPT models from OpenAI
+	{
+		"Bryley/neoai.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+		config = function()
+			require("neoai").setup({})
+		end,
+	},
+
+	--
+	-- File types
+	--
+	-- markdown preview plugin for (neo)vim
+	{
+		"iamcco/markdown-preview.nvim",
+		build = "cd app && npm install",
+		ft = "markdown",
+	},
+	-- Justfile support
+	"NoahTheDuke/vim-just",
+	"IndianBoy42/tree-sitter-just",
 }) do
 	table.insert(lvim.plugins, v)
 end

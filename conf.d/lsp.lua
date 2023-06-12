@@ -17,11 +17,11 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	-- python
-	{ command = "black", filetypes = { "python" } },
-	{ command = "ruff", filetypes = { "python" } },
+	{ name = "black", filetypes = { "python" } },
+	{ name = "ruff", filetypes = { "python" } },
 	-- prettier
 	{
-		command = "prettier",
+		name = "prettier",
 		filetypes = {
 			"typescript",
 			"typescriptreact",
@@ -35,22 +35,22 @@ formatters.setup({
 		},
 	},
 	-- shell
-	{ command = "shfmt", filetypes = { "sh" } },
+	{ name = "shfmt", filetypes = { "sh" } },
 	-- go
-	{ command = "goimports", filetypes = { "go" } },
+	{ name = "goimports", filetypes = { "go" } },
 	-- godot
-	{ command = "gdformat", filetypes = { "gdscript" } },
+	{ name = "gdformat", filetypes = { "gdscript" } },
 	-- lua
-	{ command = "stylua", filetypes = { "lua" } },
+	{ name = "stylua", filetypes = { "lua" } },
 })
 
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
 	-- python
-	{ command = "ruff", filetypes = { "python" } },
-	{ command = "mypy", filetypes = { "python" } },
+	{ name = "ruff", filetypes = { "python" } },
+	{ name = "mypy", filetypes = { "python" } },
 	-- godot
-	{ command = "gdlint", filetypes = { "gdscript" } },
+	{ name = "gdlint", filetypes = { "gdscript" } },
 })
 
 --

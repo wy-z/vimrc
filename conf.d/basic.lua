@@ -40,12 +40,10 @@ lvim.builtin.telescope.active = false
 for _, v in ipairs({
 	-- Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
 	"terryma/vim-expand-region",
-	-- quoting/parenthesizing made simple
-	"tpope/vim-surround",
+	-- Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.
+	"kylechui/nvim-surround",
 	-- sleuth.vim: Heuristically set buffer options
 	"tpope/vim-sleuth",
-	-- Pairs of handy bracket mappings
-	"tpope/vim-unimpaired",
 	-- enable repeating supported plugin maps with "."
 	"tpope/vim-repeat",
 	-- 🦘 Neovim's answer to the mouse
