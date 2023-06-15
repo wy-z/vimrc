@@ -21,12 +21,13 @@ lvim.builtin.which_key.mappings = {
 	L = lvim_mappings["L"],
 	P = lvim_mappings["p"],
 	-- custom mappings
-	["p"] = { "<cmd>lua require('fzf-lua').git_files()<cr>", "Search `git ls-files`" },
-	["pp"] = { "<cmd>lua require('fzf-lua').files()<cr>", "Serach files" },
+	["p"] = { "<cmd>lua require('fzf-lua').files()<cr>", "Serach files" },
+	["pp"] = { "<cmd>lua require('fzf-lua').git_files()<cr>", "Search `git ls-files`" },
 	["j"] = { "<cmd>lua require('fzf-lua').lsp_document_symbols()<cr>", "Search symbols" },
 	["s"] = { "<cmd>lua require('fzf-lua').lgrep_curbuf()<cr>", "Search current buffer" },
 	["S"] = { "<cmd>lua require('spectre').open()<CR>", "Open Spectre" },
 	["<leader>"] = { "<cmd>lua require('fzf-lua').commands()<cr>", "Lists commands" },
 	["/"] = { "<cmd>lua require('fzf-lua').live_grep()<cr>", "Search text, respects .gitignore" },
 	["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
+	["a"] = { "<cmd>NeoAIToggle<cr>", "Toggle NeoAI" },
 }

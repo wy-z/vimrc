@@ -41,7 +41,14 @@ for _, v in ipairs({
 	-- Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
 	"terryma/vim-expand-region",
 	-- Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.
-	"kylechui/nvim-surround",
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	},
 	-- sleuth.vim: Heuristically set buffer options
 	"tpope/vim-sleuth",
 	-- enable repeating supported plugin maps with "."
