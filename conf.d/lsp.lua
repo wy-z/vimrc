@@ -18,7 +18,7 @@ local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	-- python
 	{ name = "black", filetypes = { "python" } },
-	{ name = "ruff", filetypes = { "python" } },
+	{ name = "isort", filetypes = { "python" } },
 	-- prettier
 	{
 		name = "prettier",

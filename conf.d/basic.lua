@@ -65,8 +65,8 @@ for _, v in ipairs({
 	},
 	-- Make Vim persist editing state without fuss
 	"zhimsel/vim-stay",
-	-- Range, pattern and substitute preview for Vim
-	"markonm/traces.vim",
+	-- Navigate your code with search labels, enhanced character motions and Treesitter integration
+	"folke/flash.nvim",
 	-- Better whitespace highlighting for Vim
 	"ntpeters/vim-better-whitespace",
 	-- Improve startup time for Neovim
