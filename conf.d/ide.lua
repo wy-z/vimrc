@@ -47,6 +47,27 @@ for _, v in ipairs({
 			require("treesitter-context").setup({})
 		end,
 	},
+	-- Github Copilot
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				{
+					suggestion = { enabled = false },
+					panel = { enabled = false },
+				},
+			})
+		end,
+	},
+	{
+		"zbirenbaum/copilot-cmp",
+		dependencies = "zbirenbaum/copilot.lua",
+		config = function()
+			require("copilot_cmp").setup({})
+		end,
+	},
 	-- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 	{
 		"folke/trouble.nvim",
