@@ -29,5 +29,4 @@ lvim.builtin.which_key.mappings = {
 	["<leader>"] = { "<cmd>lua require('fzf-lua').commands()<cr>", "Lists commands" },
 	["/"] = { "<cmd>lua require('fzf-lua').live_grep()<cr>", "Search text, respects .gitignore" },
 	["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
-	["a"] = { "<cmd>NeoAIToggle<cr>", "Toggle NeoAI" },
 }

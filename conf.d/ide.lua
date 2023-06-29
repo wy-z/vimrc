@@ -127,6 +127,10 @@ for _, v in ipairs({
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
+		keys = {
+			{ "<leader>as", desc = "summarize text" },
+			{ "<leader>ag", desc = "generate git message" },
+		},
 		config = function()
 			require("neoai").setup({})
 		end,
