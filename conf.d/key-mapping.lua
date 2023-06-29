@@ -11,9 +11,7 @@ if vim.fn.has("mac") then
 end
 
 -- which keys
-lvim.builtin.which_key.setup.plugins.presets.operators = true
-lvim.builtin.which_key.setup.plugins.presets.motions = true
-lvim.builtin.which_key.setup.plugins.presets.text_objects = true
+vim.api.nvim_set_option("timeoutlen", 500) -- https://github.com/folke/which-key.nvim#%EF%B8%8F-configuration
 for k, v in pairs({
 	["p"] = { "<cmd>lua require('fzf-lua').files()<cr>", "Serach files" },
 	["pp"] = { "<cmd>lua require('fzf-lua').git_files()<cr>", "Search `git ls-files`" },
@@ -23,8 +21,6 @@ for k, v in pairs({
 	["<leader>"] = { "<cmd>lua require('fzf-lua').commands()<cr>", "Lists commands" },
 	["/"] = { "<cmd>lua require('fzf-lua').live_grep()<cr>", "Search text, respects .gitignore" },
 	["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
-	-- ["ag"],
-	-- ["as"],
 }) do
 	lvim.builtin.which_key.mappings[k] = v
 end
