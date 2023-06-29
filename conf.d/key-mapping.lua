@@ -11,16 +11,10 @@ if vim.fn.has("mac") then
 end
 
 -- which keys
-local lvim_mappings = lvim.builtin.which_key.mappings
-lvim.builtin.which_key.mappings = {
-	-- lvim mappings
-	e = lvim_mappings["e"],
-	b = lvim_mappings["b"],
-	g = lvim_mappings["g"],
-	l = lvim_mappings["l"],
-	L = lvim_mappings["L"],
-	P = lvim_mappings["p"],
-	-- custom mappings
+lvim.builtin.which_key.setup.plugins.presets.operators = true
+lvim.builtin.which_key.setup.plugins.presets.motions = true
+lvim.builtin.which_key.setup.plugins.presets.text_objects = true
+for k, v in pairs({
 	["p"] = { "<cmd>lua require('fzf-lua').files()<cr>", "Serach files" },
 	["pp"] = { "<cmd>lua require('fzf-lua').git_files()<cr>", "Search `git ls-files`" },
 	["j"] = { "<cmd>lua require('fzf-lua').lsp_document_symbols()<cr>", "Search symbols" },
@@ -29,4 +23,6 @@ lvim.builtin.which_key.mappings = {
 	["<leader>"] = { "<cmd>lua require('fzf-lua').commands()<cr>", "Lists commands" },
 	["/"] = { "<cmd>lua require('fzf-lua').live_grep()<cr>", "Search text, respects .gitignore" },
 	["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
-}
+}) do
+	lvim.builtin.which_key.mappings[k] = v
+end
