@@ -88,14 +88,6 @@ for _, v in ipairs({
 			require("lsp_signature").on_attach()
 		end,
 	},
-	-- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
-	{
-		"andymass/vim-matchup",
-		event = "CursorMoved",
-		config = function()
-			vim.g.matchup_matchparen_offscreen = { method = "popup" }
-		end,
-	},
 	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 	{
 		"folke/noice.nvim",

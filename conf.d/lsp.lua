@@ -1,16 +1,4 @@
 --
--- lsp
---
-
-lvim.lsp.installer.setup.ensure_installed = {
-	"jedi_language_server",
-	"bashls",
-	"tsserver",
-	"gopls",
-}
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
-
---
 -- null-ls
 --
 
