@@ -68,9 +68,12 @@ for _, v in ipairs({
 	-- Navigate your code with search labels, enhanced character motions and Treesitter integration
 	"folke/flash.nvim",
 	-- Better whitespace highlighting for Vim
-	"ntpeters/vim-better-whitespace",
-	-- Improve startup time for Neovim
-	"lewis6991/impatient.nvim",
+	{
+		"ntpeters/vim-better-whitespace",
+		config = function()
+			vim.g.strip_whitespace_on_save = 1
+		end,
+	},
 	-- Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
 	"embear/vim-localvimrc",
 }) do

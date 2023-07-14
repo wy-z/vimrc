@@ -81,29 +81,11 @@ for _, v in ipairs({
 	-- Multiple cursors plugin for vim/neovim
 	"mg979/vim-visual-multi",
 	-- LSP signature hint as you type
-	{
-		"ray-x/lsp_signature.nvim",
-		event = "BufRead",
-		config = function()
-			require("lsp_signature").on_attach()
-		end,
-	},
+	"ray-x/lsp_signature.nvim",
 	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 	{
 		"folke/noice.nvim",
-		config = function()
-			require("noice").setup({
-				-- fix conflicts
-				lsp = {
-					hover = {
-						enabled = false,
-					},
-					signature = {
-						enabled = false,
-					},
-				},
-			})
-		end,
+		event = "VeryLazy",
 		dependencies = {
 			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 			"MunifTanjim/nui.nvim",
@@ -127,18 +109,6 @@ for _, v in ipairs({
 			require("neoai").setup({})
 		end,
 	},
-	--
-	-- File types
-	--
-	-- markdown preview plugin for (neo)vim
-	{
-		"iamcco/markdown-preview.nvim",
-		build = "cd app && npm install",
-		ft = "markdown",
-	},
-	-- Justfile support
-	"NoahTheDuke/vim-just",
-	"IndianBoy42/tree-sitter-just",
 }) do
 	table.insert(lvim.plugins, v)
 end
