@@ -37,6 +37,9 @@ lvim.builtin.telescope.active = false
 --- plugins
 ---
 
+-- embear/vim-localvimrc
+vim.g.localvimrc_persistent = 2
+
 for _, v in ipairs({
 	-- Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
 	"terryma/vim-expand-region",
