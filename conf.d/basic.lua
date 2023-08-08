@@ -41,8 +41,6 @@ lvim.builtin.telescope.active = false
 vim.g.localvimrc_persistent = 2
 
 for _, v in ipairs({
-	-- Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
-	"terryma/vim-expand-region",
 	-- Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.
 	{
 		"kylechui/nvim-surround",
@@ -56,20 +54,31 @@ for _, v in ipairs({
 	"tpope/vim-sleuth",
 	-- enable repeating supported plugin maps with "."
 	"tpope/vim-repeat",
-	-- 🦘 Neovim's answer to the mouse
-	{
-		"ggandor/leap.nvim",
-		name = "leap",
-		config = function()
-			require("leap").add_default_mappings()
-			vim.keymap.del({ "x", "o" }, "x")
-			vim.keymap.del({ "x", "o" }, "X")
-		end,
-	},
 	-- Make Vim persist editing state without fuss
 	"zhimsel/vim-stay",
 	-- Navigate your code with search labels, enhanced character motions and Treesitter integration
-	"folke/flash.nvim",
+	{
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		keys = {
+			{
+				"s",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").jump()
+				end,
+				desc = "Flash",
+			},
+			{
+				"S",
+				mode = { "n", "o", "x" },
+				function()
+					require("flash").treesitter()
+				end,
+				desc = "Flash Treesitter",
+			},
+		},
+	},
 	-- Better whitespace highlighting for Vim
 	{
 		"ntpeters/vim-better-whitespace",

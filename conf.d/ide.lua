@@ -42,7 +42,7 @@ for _, v in ipairs({
 		}),
 	},
 	{
-		"romgrk/nvim-treesitter-context",
+		"nvim-treesitter/nvim-treesitter-context",
 		config = function()
 			require("treesitter-context").setup({})
 		end,
@@ -94,20 +94,6 @@ for _, v in ipairs({
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
 		},
-	},
-	--- Neovim plugin for intracting with GPT models from OpenAI
-	{
-		"Bryley/neoai.nvim",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
-		keys = {
-			{ "<leader>as", desc = "summarize text" },
-			{ "<leader>ag", desc = "generate git message" },
-		},
-		config = function()
-			require("neoai").setup({})
-		end,
 	},
 }) do
 	table.insert(lvim.plugins, v)
