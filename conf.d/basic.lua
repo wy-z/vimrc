@@ -60,6 +60,7 @@ for _, v in ipairs({
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
+		opts = {},
 		keys = {
 			{
 				"s",
