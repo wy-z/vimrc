@@ -54,6 +54,8 @@ for _, v in ipairs({
 	"tpope/vim-sleuth",
 	-- enable repeating supported plugin maps with "."
 	"tpope/vim-repeat",
+	-- Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
+	"terryma/vim-expand-region",
 	-- Make Vim persist editing state without fuss
 	"zhimsel/vim-stay",
 	-- Navigate your code with search labels, enhanced character motions and Treesitter integration
