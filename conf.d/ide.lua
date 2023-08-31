@@ -81,7 +81,14 @@ for _, v in ipairs({
 	-- Multiple cursors plugin for vim/neovim
 	"mg979/vim-visual-multi",
 	-- LSP signature hint as you type
-	"ray-x/lsp_signature.nvim",
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("lsp_signature").setup({})
+		end,
+	},
+
 	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 	{
 		"folke/noice.nvim",

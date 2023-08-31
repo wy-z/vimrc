@@ -63,30 +63,13 @@ for _, v in ipairs({
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		opts = {},
-		keys = {
-			{
-				"s",
-				mode = { "n", "x", "o" },
-				function()
-					require("flash").jump()
-				end,
-				desc = "Flash",
-			},
-			{
-				"S",
-				mode = { "n", "o", "x" },
-				function()
-					require("flash").treesitter()
-				end,
-				desc = "Flash Treesitter",
-			},
-		},
 	},
 	-- Better whitespace highlighting for Vim
 	{
 		"ntpeters/vim-better-whitespace",
 		config = function()
 			vim.g.strip_whitespace_on_save = 1
+			vim.g.strip_whitespace_confirm = 0
 		end,
 	},
 	-- Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
