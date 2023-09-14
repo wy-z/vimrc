@@ -6,14 +6,6 @@ vim.opt.clipboard = ""
 vim.opt.shell = "/bin/bash" -- https://www.lunarvim.org/docs/troubleshooting#are-you-using-fish
 -- gui options
 vim.opt.guifont = "Hack Nerd Font:h14"
--- neovide
-if vim.g.neovide then
-	-- full screen
-	local timer = vim.loop.new_timer()
-	timer:start(620, 0, function()
-		vim.g.neovide_fullscreen = true
-	end)
-end
 -- cursor highlight
 vim.opt.colorcolumn = { 80, 100 }
 vim.opt.cursorline = true

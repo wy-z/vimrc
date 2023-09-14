@@ -21,6 +21,7 @@ for k, v in pairs({
 	["<leader>"] = { "<cmd>lua require('fzf-lua').commands()<cr>", "Lists commands" },
 	["/"] = { "<cmd>lua require('fzf-lua').live_grep()<cr>", "Search text, respects .gitignore" },
 	["tt"] = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
+	["tf"] = { "<cmd>NvimTreeToggle<cr>", "Toggle nvim-tree" },
 }) do
 	lvim.builtin.which_key.mappings[k] = v
 end
