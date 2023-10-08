@@ -32,14 +32,16 @@ for _, v in ipairs({
 	{
 		"ibhagwan/fzf-lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		require("fzf-lua").setup({
-			winopts = {
-				on_create = function()
-					vim.keymap.set("t", "<C-j>", "<Down>", { silent = true, buffer = true })
-					vim.keymap.set("t", "<C-k>", "<Up>", { silent = true, buffer = true })
-				end,
-			},
-		}),
+		config = function()
+			require("fzf-lua").setup({
+				winopts = {
+					on_create = function()
+						vim.keymap.set("t", "<C-j>", "<Down>", { silent = true, buffer = true })
+						vim.keymap.set("t", "<C-k>", "<Up>", { silent = true, buffer = true })
+					end,
+				},
+			})
+		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
@@ -88,7 +90,6 @@ for _, v in ipairs({
 			require("lsp_signature").setup({})
 		end,
 	},
-
 	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 	{
 		"folke/noice.nvim",
@@ -101,6 +102,12 @@ for _, v in ipairs({
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
 		},
+	},
+	-- markdown preview plugin for (neo)vim
+	{
+		"iamcco/markdown-preview.nvim",
+		build = "cd app && npm install",
+		ft = "markdown",
 	},
 }) do
 	table.insert(lvim.plugins, v)

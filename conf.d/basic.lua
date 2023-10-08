@@ -4,6 +4,8 @@
 
 vim.opt.clipboard = ""
 vim.opt.shell = "/bin/bash" -- https://www.lunarvim.org/docs/troubleshooting#are-you-using-fish
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 -- gui options
 vim.opt.guifont = "Hack Nerd Font:h14"
 -- cursor highlight
@@ -42,8 +44,6 @@ for _, v in ipairs({
 			require("nvim-surround").setup({})
 		end,
 	},
-	-- sleuth.vim: Heuristically set buffer options
-	"tpope/vim-sleuth",
 	-- enable repeating supported plugin maps with "."
 	"tpope/vim-repeat",
 	-- Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
