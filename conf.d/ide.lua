@@ -56,6 +56,7 @@ for _, v in ipairs({
 		event = "InsertEnter",
 		config = function()
 			require("copilot").setup({
+				-- for https://github.com/zbirenbaum/copilot-cmp
 				{
 					suggestion = { enabled = false },
 					panel = { enabled = false },
@@ -130,6 +131,8 @@ for _, v in ipairs({
 		build = "cd app && npm install",
 		ft = "markdown",
 	},
+	-- Vim Just Syntax
+	{ "NoahTheDuke/vim-just" },
 }) do
 	table.insert(lvim.plugins, v)
 end
