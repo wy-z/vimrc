@@ -11,7 +11,6 @@ if vim.fn.has("mac") then
 end
 
 -- which keys
-vim.api.nvim_set_option("timeoutlen", 500) -- https://github.com/folke/which-key.nvim#%EF%B8%8F-configuration
 for k, v in pairs({
 	["p"] = { "<cmd>lua require('fzf-lua').files()<cr>", "Serach files" },
 	["pp"] = { "<cmd>lua require('fzf-lua').git_files()<cr>", "Search `git ls-files`" },
