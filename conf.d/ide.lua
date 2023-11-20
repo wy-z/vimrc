@@ -9,7 +9,6 @@ lvim.builtin.treesitter.ensure_installed = {
 	"c",
 	"elixir",
 	"erlang",
-	"fish",
 	"gdscript",
 	"go",
 	"gomod",

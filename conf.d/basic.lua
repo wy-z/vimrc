@@ -26,6 +26,7 @@ vim.cmd([[
 
 lvim.format_on_save.enabled = true
 lvim.builtin.telescope.active = false
+lvim.builtin.nvimtree.setup.view.side = "right"
 
 ---
 --- plugins
