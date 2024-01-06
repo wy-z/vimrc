@@ -42,7 +42,10 @@ for _, v in ipairs({
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
-		opts = {},
+		opts = {
+			max_lines = 6,
+			separator = "-",
+		},
 	},
 	-- Github Copilot
 	{
