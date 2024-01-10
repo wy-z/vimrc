@@ -30,6 +30,8 @@ formatters.setup({
 	{ name = "gdformat", filetypes = { "gdscript" } },
 	-- lua
 	{ name = "stylua", filetypes = { "lua" } },
+	-- nix
+	{ name = "alejandra", filetypes = { "nix" } },
 })
 
 local linters = require("lvim.lsp.null-ls.linters")
