@@ -5,6 +5,7 @@
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	-- python
+	{ name = "isort", filetypes = { "python" } },
 	{ name = "ruff", filetypes = { "python" } },
 	{ name = "ruff_format", filetypes = { "python" } },
 	-- prettier
