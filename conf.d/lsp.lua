@@ -2,12 +2,6 @@
 -- lsp
 --
 
--- python
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
-lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
-	return server ~= "jedi_language_server"
-end, lvim.lsp.automatic_configuration.skipped_servers)
-
 --
 -- null-ls
 --
