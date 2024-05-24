@@ -12,6 +12,7 @@ formatters.setup({
 	{ name = "isort", filetypes = { "python" } },
 	{ name = "ruff", filetypes = { "python" } },
 	{ name = "ruff_format", filetypes = { "python" } },
+	{ name = "djlint", filetypes = { "jinja.html" } },
 	-- prettier
 	{
 		name = "prettier",
@@ -44,9 +45,17 @@ linters.setup({
 	-- python
 	{ name = "ruff", filetypes = { "python" } },
 	{ name = "mypy", filetypes = { "python" } },
+	{ name = "djlint", filetypes = { "jinja.html" } },
 	-- godot
 	{ name = "gdlint", filetypes = { "gdscript" } },
 })
+
+--
+-- Python
+--
+vim.cmd([[
+	au BufRead,BufNewFile *.html.j2 set filetype=jinja.html
+]])
 
 --
 -- godot

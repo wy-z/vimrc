@@ -61,7 +61,9 @@ for _, v in ipairs({
 	{
 		"zbirenbaum/copilot-cmp",
 		dependencies = "zbirenbaum/copilot.lua",
-		opts = {},
+		opts = {
+			fix_pairs = true,
+		},
 	},
 	-- 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 	{
