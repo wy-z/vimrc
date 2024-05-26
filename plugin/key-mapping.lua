@@ -2,9 +2,9 @@
 vim.opt.clipboard = ""
 vim.cmd('map cp "+y')
 if vim.fn.has("mac") then
-  local op = vim.opt.paste:get() and "paste" or "nopaste"
-  vim.cmd(string.format("inoremap <d-v> <esc>:set paste<cr>a<c-r>+<esc>:set %s<cr>a", op))
-  vim.cmd([[
+        local op = vim.opt.paste:get() and "paste" or "nopaste"
+        vim.cmd(string.format("inoremap <d-v> <esc>:set paste<cr>a<c-r>+<esc>:set %s<cr>a", op))
+        vim.cmd([[
         noremap <d-v> "+Pa
         cnoremap <d-v> <c-r>+
         tnoremap <expr> <d-v> '<c-\><c-n>"+Pi'
