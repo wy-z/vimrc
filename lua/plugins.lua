@@ -13,6 +13,14 @@ return {
 	"zhimsel/vim-stay",
 	-- Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
 	"embear/vim-localvimrc",
+	-- Better whitespace highlighting for Vim
+	{
+		"ntpeters/vim-better-whitespace",
+		config = function()
+			vim.g.strip_whitespace_on_save = 1
+			vim.g.strip_whitespace_confirm = 0
+		end,
+	},
 
 	--
 	-- IDE
