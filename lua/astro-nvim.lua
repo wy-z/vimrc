@@ -12,4 +12,18 @@ return {
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
 	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
+
+	--
+	-- Custom
+	--
+	{
+		"nvim-telescope/telescope.nvim",
+		keys = {
+			{ "<leader>p",        "<leader>ff", remap = true },
+			{ "<leader>s",        "<leader>f/", remap = true },
+			{ "<leader>j",        "<leader>ls", remap = true },
+			{ "<leader>/",        "<leader>fW", remap = true },
+			{ "<leader><leader>", "<leader>fC", remap = true },
+		},
+	}
 }
