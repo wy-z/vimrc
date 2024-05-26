@@ -12,4 +12,5 @@ return {
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
 	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
+	{ import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 }
