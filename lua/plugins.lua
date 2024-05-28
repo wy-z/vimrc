@@ -1,3 +1,6 @@
+-- embear/vim-localvimrc
+vim.g.localvimrc_persistent = 2
+
 ---@type LazySpec
 return {
 	--

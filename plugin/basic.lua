@@ -19,6 +19,3 @@ vim.cmd([[
 vim.cmd([[
   set fileencodings=ucs-bom,utf-8,gb18030,default,latin1
 ]])
-
--- embear/vim-localvimrc
-vim.g.localvimrc_persistent = 2
