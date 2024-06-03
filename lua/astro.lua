@@ -6,6 +6,7 @@ return {
 			opts.options.opt.relativenumber = false
 		end,
 	},
+	-- community plugins
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.flash-nvim" },
@@ -21,4 +22,10 @@ return {
 	{ import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 	{ import = "astrocommunity.recipes.neovide" },
 	{ import = "astrocommunity.recipes.vscode" },
+	-- language pack
+	{ import = "astrocommunity.pack.python" },
+	{ import = "astrocommunity.pack.go" },
+	{ import = "astrocommunity.pack.typescript" },
+	{ import = "astrocommunity.pack.lua" },
+	{ import = "astrocommunity.pack.godot" },
 }
