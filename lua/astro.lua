@@ -3,7 +3,7 @@ return {
 	{
 		"AstroNvim/astrocore",
 		opts = function(_, opts)
-			opts.options.opt.relativenumber = false
+			opts.options.opt.relativenumber = true
 		end,
 	},
 	-- community plugins
@@ -14,7 +14,7 @@ return {
 	{ import = "astrocommunity.editing-support.nvim-treesitter-context" },
 	{ import = "astrocommunity.completion.copilot-cmp" },
 	{ import = "astrocommunity.diagnostics.trouble-nvim" },
-	{ import = "astrocommunity.project.nvim-spectre" },
+	{ import = "astrocommunity.search.nvim-spectre" },
 	{ import = "astrocommunity.editing-support.vim-visual-multi" },
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
 	{ import = "astrocommunity.git.diffview-nvim" },
