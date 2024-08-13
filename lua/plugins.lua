@@ -6,6 +6,7 @@ return {
 	--
 	-- Basic enhancement
 	--
+
 	-- enable repeating supported plugin maps with "."
 	"tpope/vim-repeat",
 	-- Heuristically set buffer options
@@ -28,6 +29,25 @@ return {
 	--
 	-- IDE
 	--
+
+	-- A native neovim extension for Codeium
+	{
+		"Exafunction/codeium.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+
+			local cmp = require("cmp")
+			local config = cmp.get_config()
+			table.insert(config.sources, {
+				name = "codeium",
+			})
+			cmp.setup(config)
+		end,
+	},
 	-- Plugin to improve viewing Markdown files in Neovim
 	{
 		"MeanderingProgrammer/markdown.nvim",

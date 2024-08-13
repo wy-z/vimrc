@@ -13,7 +13,6 @@ return {
 	{ import = "astrocommunity.motion.flash-nvim" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 	{ import = "astrocommunity.editing-support.nvim-treesitter-context" },
-	{ import = "astrocommunity.completion.copilot-cmp" },
 	{ import = "astrocommunity.diagnostics.trouble-nvim" },
 	{ import = "astrocommunity.search.nvim-spectre" },
 	{ import = "astrocommunity.editing-support.vim-visual-multi" },
@@ -22,10 +21,4 @@ return {
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
 	{ import = "astrocommunity.recipes.neovide" },
 	{ import = "astrocommunity.recipes.vscode" },
-	-- language pack
-	{ import = "astrocommunity.pack.python" },
-	{ import = "astrocommunity.pack.go" },
-	{ import = "astrocommunity.pack.typescript" },
-	{ import = "astrocommunity.pack.lua" },
-	{ import = "astrocommunity.pack.godot" },
 }
