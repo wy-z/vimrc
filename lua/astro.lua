@@ -21,4 +21,5 @@ return {
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
 	{ import = "astrocommunity.recipes.neovide" },
 	{ import = "astrocommunity.recipes.vscode" },
+	{ import = "astrocommunity.completion.codeium-nvim" },
 }
