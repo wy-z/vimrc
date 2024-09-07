@@ -27,25 +27,6 @@ return {
 	},
 
 	--
-	-- IDE
 	--
-
-	-- Plugin to improve viewing Markdown files in Neovim
-	{
-		"MeanderingProgrammer/markdown.nvim",
-		main = "render-markdown",
-		opts = {},
-		name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
-		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
-	},
-	-- markdown preview plugin for (neo)vim
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && yarn install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	},
+	--
 }
