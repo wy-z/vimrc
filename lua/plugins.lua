@@ -27,6 +27,13 @@ return {
 	},
 
 	--
+	-- IDE
 	--
-	--
+
+	{
+		"yetone/avante.nvim",
+		opts = function(_, opts)
+			opts.provider = "openai"
+		end,
+	},
 }

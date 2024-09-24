@@ -22,5 +22,6 @@ return {
 	{ import = "astrocommunity.recipes.neovide" },
 	{ import = "astrocommunity.recipes.vscode" },
 	{ import = "astrocommunity.completion.codeium-nvim" },
+	{ import = "astrocommunity.completion.avante-nvim" },
 	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 }
