@@ -18,9 +18,6 @@ return {
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
 	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
-	{ import = "astrocommunity.recipes.neovide" },
+	{ import = "astrocommunity.completion.copilot-lua-cmp" },
 	{ import = "astrocommunity.recipes.vscode" },
-	{ import = "astrocommunity.completion.codeium-nvim" },
-	{ import = "astrocommunity.completion.avante-nvim" },
-	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 }

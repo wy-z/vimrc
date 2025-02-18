@@ -25,15 +25,4 @@ return {
 			vim.g.strip_whitespace_confirm = 0
 		end,
 	},
-
-	--
-	-- IDE
-	--
-
-	{
-		"yetone/avante.nvim",
-		opts = function(_, opts)
-			opts.provider = "openai"
-		end,
-	},
 }
