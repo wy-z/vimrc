@@ -19,5 +19,6 @@ return {
 	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
 	{ import = "astrocommunity.completion.copilot-lua-cmp" },
+	{ import = "astrocommunity.editing-support.nvim-treesitter-context" },
 	{ import = "astrocommunity.recipes.vscode" },
 }
