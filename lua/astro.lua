@@ -7,12 +7,23 @@ return {
 			opts.options.opt.clipboard = ""
 		end,
 	},
+	-- patch
+	{
+		"hrsh7th/nvim-cmp",
+		enabled = false,
+	},
+	{
+		"saghen/blink.compat",
+		dependencies = { { "saghen/blink.cmp", version = "1.*" } },
+		lazy = true,
+		opts = { impersonate_nvim_cmp = true },
+	},
 	-- community plugins
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.flash-nvim" },
 	{ import = "astrocommunity.utility.noice-nvim" },
-	{ import = "astrocommunity.diagnostics.trouble-nvim" },
+	{ import = "astrocomdinity.diagnostics.trouble-nvim" },
 	{ import = "astrocommunity.search.nvim-spectre" },
 	{ import = "astrocommunity.editing-support.vim-visual-multi" },
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
