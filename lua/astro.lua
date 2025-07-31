@@ -7,8 +7,6 @@ return {
 			opts.options.opt.clipboard = ""
 		end,
 	},
-	-- patch
-	{ "saghen/blink.cmp", version = "1.*" },
 	-- community plugins
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.motion.nvim-surround" },
@@ -19,8 +17,6 @@ return {
 	{ import = "astrocommunity.editing-support.vim-visual-multi" },
 	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
-	{ import = "astrocommunity.pack.harper" },
 	{ import = "astrocommunity.completion.copilot-lua-cmp" },
 	{ import = "astrocommunity.editing-support.nvim-treesitter-context" },
-	{ import = "astrocommunity.recipes.vscode" },
 }
