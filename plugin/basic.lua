@@ -2,10 +2,10 @@
 -- vim options
 --
 
-vim.opt.clipboard = ""
 vim.opt.shell = "/bin/zsh" -- https://www.lunarvim.org/docs/troubleshooting#are-you-using-fish
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.opt.relativenumber = true
 
 -- gui options
 vim.opt.guifont = "Hack Nerd Font:h14"

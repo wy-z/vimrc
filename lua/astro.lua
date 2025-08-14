@@ -1,12 +1,5 @@
 ---@type LazySpec
 return {
-	{
-		"AstroNvim/astrocore",
-		opts = function(_, opts)
-			opts.options.opt.relativenumber = true
-			opts.options.opt.clipboard = ""
-		end,
-	},
 	-- community plugins
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.motion.nvim-surround" },
