@@ -25,4 +25,31 @@ return {
 			vim.g.strip_whitespace_confirm = 0
 		end,
 	},
+
+	--
+	-- IDE
+	--
+
+	-- Claude Code Neovim IDE Extension
+	{
+		"coder/claudecode.nvim",
+		dependencies = { "folke/snacks.nvim" },
+		config = true,
+		keys = {
+			{ "<leader>a", desc = "AI/Claude" },
+			{ "<leader>aa", "<cmd>ClaudeCode<cr>", desc = "Toggle" },
+			{ "<leader>ar", "<cmd>ClaudeCode --resume<cr>", desc = "Resume" },
+			{ "<leader>ac", "<cmd>ClaudeCode --continue<cr>", desc = "Continue" },
+			{ "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add buffer" },
+			{ "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send selection" },
+			{
+				"<leader>at",
+				"<cmd>ClaudeCodeTreeAdd<cr>",
+				desc = "Add from tree",
+				ft = { "NvimTree", "neo-tree", "oil", "minifiles" },
+			},
+			{ "<leader>aj", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
+			{ "<leader>ak", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
+		},
+	},
 }
