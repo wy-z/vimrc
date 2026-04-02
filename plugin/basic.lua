@@ -6,6 +6,7 @@ vim.opt.shell = "/bin/zsh" -- https://www.lunarvim.org/docs/troubleshooting#are-
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.relativenumber = true
+vim.cmd.colorscheme("astrodark")
 
 -- gui options
 vim.opt.guifont = "Hack Nerd Font:h14"
